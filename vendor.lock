@@ -1,0 +1,4 @@
+# Pinned sources, cloned into vendor/ by scripts/00_setup_env.sh.
+# name            url                                           commit
+inspect-robots    https://github.com/robocurve/inspect-robots   4d35fe4b81a643c0e61e8d287810b3c26f9d386a
+LLM_LIBERO        https://github.com/IRVLUTD/LLM_LIBERO         7db834afc6c202abf5fd93668e65141630408551

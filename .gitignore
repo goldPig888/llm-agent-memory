@@ -1,0 +1,17 @@
+# Pinned upstream checkouts (see vendor.lock; 00_setup_env.sh clones them)
+vendor/
+
+# Episode outputs and Codex workspaces (videos, frames, logs)
+outputs/
+workspaces/
+
+# Secrets (none are needed for Codex runs, but never commit them)
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
