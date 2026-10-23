@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "llm-agent-memory"
 version = "0.1.0"
-description = "Codex as a closed-loop LIBERO-10 policy, with cross-episode memory, on the LLM-LIBERO protocol."
+description = "Local Muse Glimmer evaluation on the pinned LLM-LIBERO protocol."
 readme = "README.md"
 requires-python = ">=3.11"
 # inspect-robots, inspect-robots-agent and inspect-robots-libero come from the
@@ -15,14 +15,13 @@ dependencies = [
     "numpy>=1.24",
     "pillow>=10",
     "anyio>=4.5",
-    "mcp>=1.12,<2",
+    "httpx>=0.27",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
-
-[project.scripts]
-libero-mcp = "llm_agent_memory.mcp_server:main"
+setup = ["huggingface-hub"]
+drive = ["google-api-python-client", "google-auth-oauthlib", "google-auth-httplib2"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/llm_agent_memory"]

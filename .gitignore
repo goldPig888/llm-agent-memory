@@ -1,11 +1,10 @@
 # Pinned upstream checkouts (see vendor.lock; 00_setup_env.sh clones them)
 vendor/
 
-# Episode outputs and Codex workspaces (videos, frames, logs)
+# Generated experiment outputs and credentials
 outputs/
-workspaces/
 
-# Secrets (none are needed for Codex runs, but never commit them)
+# Never commit credentials
 .env
 .env.*
 

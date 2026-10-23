@@ -45,20 +45,11 @@ pip install -r vendor/LLM_LIBERO/requirements.lock.txt \
   ./vendor/inspect-robots \
   ./vendor/inspect-robots/plugins/inspect-robots-agent \
   ./vendor/LLM_LIBERO
-pip install -e ".[dev]"
+pip install -e ".[dev,setup,drive]"
 
 if [ ! -f "${LIBERO_CONFIG_PATH:-$HOME/.libero}/config.yaml" ]; then
   echo "[00] initialising LIBERO (answering N to the dataset-path question)"
   echo N | python -c "import libero.libero" || true
 fi
 
-if command -v codex >/dev/null 2>&1; then
-  echo "[00] codex found: $(codex --version 2>/dev/null || echo unknown version)"
-else
-  echo "[00] codex not found. Install it with: npm install -g @openai/codex  (then run: codex login)"
-fi
-
-echo
-echo "[00] done. Next:"
-echo "  conda activate $ENV_NAME"
-echo "  python scripts/01_check_install.py"
+echo "LIBERO environment ready. Next: python scripts/01_check_install.py"

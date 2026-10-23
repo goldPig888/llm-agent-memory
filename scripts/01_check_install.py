@@ -16,7 +16,8 @@ import subprocess
 import sys
 import time
 
-from llm_agent_memory.codex import REPO
+from pathlib import Path
+REPO = Path(__file__).resolve().parents[1]
 from llm_agent_memory.episode import Episode, libero_factory
 from llm_agent_memory.fake import fake_factory
 

@@ -2,7 +2,7 @@
 
 It declares exactly the same action and observation spaces as the real
 ``libero`` embodiment (it subclasses it), so the agent toolset, the MCP tool
-schemas and the Codex wiring are all exercised for real. Only the physics is
+schemas and the policy wiring are all exercised for real. Only the physics is
 fake: the end effector jumps to each commanded pose, and the "task" succeeds
 when the end effector is lifted above ``success_z`` with the gripper closed.
 """

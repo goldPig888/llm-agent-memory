@@ -2,7 +2,7 @@
 
 Nothing here is retyped: the system prompt comes from the upstream agent
 policy's template and the embodiment notes come from the LLM_LIBERO plugin, so
-a Codex episode sees the same text as the episodes in the paper.
+a local-model episode sees the same text as the episodes in the paper.
 """
 
 from __future__ import annotations

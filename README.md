@@ -1,185 +1,119 @@
-# llm-agent-memory
+# Muse Glimmer on LIBERO-10, locally
 
-Codex as a closed-loop policy on LIBERO-10, with cross-episode memory.
+Evaluate Meta Muse Glimmer with RGB observations and structured robot tool calls.
+Inference runs on this machine; no Codex sessions or hosted inference credentials.
+The pinned LLM-LIBERO tasks, prompts, motion adapter, and simulator success checker
+are retained. Default evaluation: tasks 0–9, initial states 0–9, 80 model calls,
+900 simulator steps, full text history and images from the latest two observations.
+Each episode starts fresh without demonstrations or earlier-episode notes.
 
-This repo runs the [LLM-LIBERO](https://irvlutd.github.io/LLM-LIBERO/) protocol
-with one change: instead of a stateless API call per step, the policy is a
-persistent Codex session (your ChatGPT plan, the same Codex you use in the
-terminal). The tasks, initial states, embodiment, prompt, tools, 80-call budget
-and 900-step limit are the paper's, imported from pinned sources rather than
-copied, so Codex results compare directly with the paper's zero-shot baselines.
+## Environment
 
-On top of that, every episode's `hindsight` note (the model's own "what I wish
-I had known") can be fed forward to later episodes. In the paper those notes
-were logged and never used. Here they are the variable under study.
-
-## Setup on a new machine
-
-Linux with an NVIDIA GPU (headless EGL), `git`, `conda`, and Node.js for Codex.
+On another Linux/NVIDIA PC, install Miniconda, Git, CMake, a C++ compiler,
+and a CUDA toolkit compatible with its driver (CUDA 12.8 tested here). Then:
 
 ```bash
 git clone https://github.com/goldPig888/llm-agent-memory.git
 cd llm-agent-memory
-bash scripts/00_setup_env.sh          # pinned sources + conda env + LIBERO + this package
+bash scripts/00_setup_env.sh
 conda activate llm-agent-memory
-python scripts/01_check_install.py    # unit tests + one real LIBERO episode, no model calls
+python scripts/01_check_install.py --fake
 
-npm install -g @openai/codex          # if you do not have it yet
-codex login                           # sign in with your ChatGPT plan
-python scripts/02_install_codex_config.py
+# Choose a disk with room for ~19 GB of weights, builds, and rollout data.
+export MUSE_ROOT="$HOME/.local/share/muse-glimmer"
+export CUDA_HOME=/usr/local/cuda  # adjust to your installed toolkit
+bash scripts/setup_model.sh
+bash scripts/serve_model.sh     # keep this terminal running
 ```
 
-## The scripts, in order
+Keep `MUSE_ROOT` set to the same location for setup and serving. The build
+detects the local GPU architecture; override with `CUDA_ARCHITECTURES` if needed.
+`CUDA_VISIBLE_DEVICES` selects GPUs. `GPU_SPLIT=0.4,0.6` optionally sets a split
+for two GPUs; otherwise llama.cpp distributes weights automatically. GPU memory
+requirements include the vision encoder and context cache, not just the weights.
 
-| Script | What it does |
-|---|---|
-| `00_setup_env.sh` | One-time install: clones `vendor.lock` into `vendor/`, then a conda env |
-| `01_check_install.py` | Tests plus a scripted LIBERO episode (lift 3 cm, close, open). `--fake` skips LIBERO |
-| `02_install_codex_config.py` | Registers the `libero` MCP server in `~/.codex/config.toml`. Safe to rerun |
-| `03_open_codex_episode.py` | Opens one episode as a normal interactive Codex chat you can watch |
-| `04_run_codex_batch.py` | Runs many episodes headless with `codex exec`, resumable |
-| `05_summarize.py` | Success per batch and per task, next to the paper's rates |
+The existing Python environment name is retained. `scripts/00_setup_env.sh`
+can install the pinned simulator dependencies on a new machine.
 
-### First run: check Codex can see the cameras
+This machine has two RTX A5000 24 GB GPUs. The official 17 GB Q4 GGUF and vision
+projector are under `/metadisk/may/muse-glimmer/models`. CUDA 12.8 builds the
+llama.cpp server at `/metadisk/may/muse-glimmer/llama.cpp/build-cuda128/bin/llama-server`.
+Full BF16 requires more memory; this evaluation uses quantization explicitly.
 
 ```bash
-python scripts/03_open_codex_episode.py --task 2 --init 0 --fake
+bash scripts/setup_model.sh  # reproducible download and CUDA build on this machine
+bash scripts/serve_model.sh
+python scripts/smoke_model.py  # requires two-camera image understanding + a tool call
+python scripts/run_local.py --tasks 2 --inits 0
+# Full paper-sized evaluation, only after the smoke test:
+python scripts/run_local.py --tasks 0 1 2 3 4 5 6 7 8 9 --inits 0 1 2 3 4 5 6 7 8 9
 ```
 
-The fake simulator draws a red square where the gripper is. Once Codex has
-called `start_episode`, ask it what it sees in the camera images. If it cannot
-describe a red square, it is not receiving the MCP image blocks and will fall
-back to opening the saved PNGs (the AGENTS.md rules allow exactly that). Fix
-this before running real episodes, since a blind policy is not the experiment.
+### Medium and high on separate PCs
 
-### One real episode, interactively
+In a second terminal on the **medium** PC:
 
 ```bash
-python scripts/03_open_codex_episode.py --task 2 --init 0 --effort high
+conda activate llm-agent-memory
+python scripts/smoke_model.py
+python -u scripts/run_local.py --effort medium --output outputs/muse
 ```
 
-### A pilot batch
+On the **high** PC use `--effort high` instead. Each command defaults to all
+ten tasks and initial states 0–9 (100 episodes). The runner sets reasoning
+strength on every request, overriding the server default. Run inside `tmux`
+or `screen` if disconnecting SSH; keep both server and runner alive.
+Use the same pinned weights and 80-call / 900-step / two-observation defaults
+across machines. This runner does not automatically resume interrupted runs.
 
-Task 2 (33% pooled in the paper) leaves room to move in both directions:
+Point the viewer at the same `--output` directory used by the runner. Its
+`campaign.json` appears when the first run starts.
+
+The model endpoint is `http://127.0.0.1:8081/v1`. The runner rejects non-loopback
+endpoints and does not inherit cloud keys. The local endpoint uses an HTTP
+chat interface; it does not send requests to a paid provider.
+Use `--effort low|medium|high`, `--image-horizon`, `--max-output-tokens`, and
+`--output` to configure runs. The server has one 131,072-token slot; requests
+that exceed context or truncate output must be investigated rather than
+silently counted as valid policy comparisons. Protocol metadata records limits.
+`--plan-only` writes pending runs without model or simulator calls.
+
+## Viewer
 
 ```bash
-python scripts/04_run_codex_batch.py --label pilot_zs --tasks 2 --inits 0-9 --effort high
-python scripts/05_summarize.py --label pilot_zs
+python scripts/serve_experiment_dashboard.py --output outputs/muse --port 8765
 ```
 
-### Memory experiments
+Open http://localhost:8765. Adapted from LLM_LIBERO's experiment dashboard:
+per-task/state results, official simulator success, videos, trajectories,
+conversation, model-call token counts, and latency. Refresh to update.
+Raw requests/responses, framework logs, frames and videos live beside each run.
+On this machine `outputs/muse` points to `/metadisk/may/muse-glimmer/results`
+to leave the main disk free. A separate `outputs/muse_smoke` stores the one-call
+setup check; it is excluded from the benchmark viewer and exports.
+A fake/smoke run is not a benchmark result.
+
+## Google Drive export and upload
+
+Reused from IRVLUTD/LLM_LIBERO. Default folder:
+`1D6vn9HiG9V81ROdV57m7zy8tOsDLL84M` (same as upstream).
+Existing OAuth files can be used by path; never commit credentials.
 
 ```bash
-# zero-shot baseline, then the same episodes with notes from it
-python scripts/04_run_codex_batch.py --label zs  --tasks 2 --inits 0-9
-python scripts/04_run_codex_batch.py --label mem --tasks 2 --inits 0-9 \
-    --memory same_task --memory-from zs
+# Local export only:
+python scripts/upload_experiment_bundle.py --source outputs/muse --visualization --export-only
+# Export and merge into the shared Drive results (explicit upload):
+python scripts/upload_experiment_bundle.py --source outputs/muse --visualization \
+  --token /home/may/Desktop/Github/LLM_LIBERO/outputs/drive_auth/token.json
+# Fetch selected local rollout videos, then upload them to the same folder:
+python scripts/fetch_rollout_videos.py --help
+python scripts/upload_rollout_videos.py --help
 ```
 
-| `--memory` | What the episode sees |
-|---|---|
-| `off` | Nothing extra. Zero-shot, identical to the paper (default) |
-| `same_task` | Up to 5 most recent notes from earlier episodes of the same task |
-| `all_tasks` | Up to 5 most recent notes from earlier episodes of any task |
+Supply `--file-id` to merge into a specific shared results file. The uploader
+preserves existing episode records and writes a receipt. Uploading is separate
+from evaluation; no upload happens automatically.
 
-Each batch writes its own notes to `outputs/memory/<label>.jsonl`.
-`--memory-from` adds another batch's file as a read-only source. An episode
-only sees notes written before it started. The header text is the upstream
-agent's `prior_learnings` wording.
-
-## How it works
-
-```text
-codex (your plan) ── MCP stdio ──> llm_agent_memory.mcp_server
-                                      │  start_episode, move_to, done, give_up, episode_status
-                                      v
-                                   Episode (Algorithm 1 of the paper)
-                                      │  upstream agent Toolset: same validation and interpolation
-                                      v
-                                   LiberoEmbodiment (pinned LLM_LIBERO) ──> LIBERO / MuJoCo
-```
-
-Each episode gets a workspace, `workspaces/<time>_<label>_taskXX_initYY/`,
-whose `AGENTS.md` holds the paper's system prompt verbatim plus the session
-rules. Codex runs there with a read-only sandbox. The MCP server allows one
-`start_episode` per session, on the task and initial state the launch script
-assigned, so an episode cannot be restarted or swapped for an easier one.
-
-Outputs per episode, in `outputs/codex_runs/<same folder name>/`:
-
-```text
-protocol.json    task, prompt, limits, memory notes shown (if any)
-episode.jsonl    every tool call, its arguments, and what the model was told
-frames/          the PNG of every observation, per camera
-result.json      outcome, success, calls, steps, final hindsight note
-<time>_taskXX_initYY/rollout.mp4   agentview | wrist video, 20 fps
-```
-
-## Differences from the paper's API runs
-
-| | Paper (API) | This repo (Codex) |
-|---|---|---|
-| Model access | Provider API, metered | Codex on a ChatGPT plan |
-| Context | Full text history, images from the last 2 observations | Whatever Codex keeps (persistent session, its own compaction) |
-| Budget | 80 LLM calls | 80 robot tool calls; Codex's own reasoning turns are not counted |
-| Tokens and cost | Measured per call | Not reported on a plan |
-| Prompt, tools, limits, scoring | | Identical (imported from the same pinned code) |
-
-The context row is the point of the experiment. The budget and cost rows mean
-Codex numbers are comparable on success rate, not on efficiency. For cost
-numbers, the same loop has to run against the API.
-
-## Keeping episodes honest
-
-Codex can run shell commands, and a read-only sandbox still lets it read
-files, including LIBERO's task files with object positions. Three guards:
-
-1. AGENTS.md forbids shell, file, web and code use (except opening the frame PNGs).
-2. Codex runs with `--sandbox read-only`.
-3. `04` saves Codex's event stream and counts any shell, file or web action
-   as `off_protocol`. `05` lists those episodes. Exclude them from results.
-
-Interactive runs (`03`) have no event log, so the audit only covers batches.
-Use `03` for watching and debugging, `04` for numbers.
-
-## Pinned sources
-
-`vendor.lock` names two repos and the exact commits to use. `00_setup_env.sh`
-clones them into `vendor/` (which git ignores) and checks those commits out.
-
-| Repo | Commit | Why |
-|---|---|---|
-| `inspect-robots` | `4d35fe4` | The framework commit the paper's runs used (`upstream_commit.txt` in LLM_LIBERO) |
-| `LLM_LIBERO` | `7db834a` | LIBERO-10 embodiment, tasks and prompt from the paper |
-
-To move to newer commits, edit `vendor.lock`, rerun `00_setup_env.sh`, and
-rerun `python -m pytest`. The prompt test fails if the paper's prompt changed.
-
-## Layout
-
-```text
-scripts/                 00 to 05, run in order
-src/llm_agent_memory/
-  protocol.py            prompt, limits, task list (imported, not retyped)
-  episode.py             one episode: tool calls in, observations out
-  mcp_server.py          the Codex-facing MCP server
-  memory.py              hindsight store and the memory modes
-  workspace.py           per-episode AGENTS.md
-  codex.py               Codex command lines, config block, audit
-  fake.py                LIBERO stand-in for wiring checks
-tests/                   no simulator or model needed
-vendor.lock              pinned upstream commits (cloned into vendor/)
-```
-
-## Citation
-
-Built on
-
-```bibtex
-@misc{espinola2026reasoningaction,
-  title  = {From Reasoning to Action: Benchmarking Frontier AI Models on LIBERO-10 Robot Manipulation Tasks},
-  author = {Espinola, May and Zhang, Qifan and Xiang, Yu},
-  year   = {2026},
-  url    = {https://irvlutd.github.io/LLM-LIBERO/}
-}
-```
+Sources: [Meta deployment guide](https://dev.meta.ai/docs/muse-glimmer/deploy),
+[official model](https://huggingface.co/meta-models/Muse-Glimmer-30B-GGUF),
+[LLM_LIBERO](https://github.com/IRVLUTD/LLM_LIBERO).
