@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -9,6 +10,16 @@ import threading
 from urllib.parse import unquote, urlsplit
 
 from experiment_report import write_report
+
+
+def revision(root):
+    paths = [root / 'campaign.json', Path(__file__).with_name('experiment_report.py')]
+    manifest = json.loads((root / 'campaign.json').read_text())
+    for run in manifest.get('runs', []):
+        folder = (root / run['directory']).resolve()
+        if folder.is_relative_to(root.resolve()):
+            paths.extend([folder / 'api/api_usage.jsonl', folder / 'summary.json'])
+    return max((p.stat().st_mtime_ns for p in paths if p.exists()), default=0)
 
 
 def main() -> None:
@@ -24,9 +35,8 @@ def main() -> None:
 
     def refresh_if_stale() -> None:
         """Rebuild only when the manifest is newer than the rendered report."""
-        manifest = root / 'campaign.json'
         report = root / 'report.html'
-        if not report.exists() or manifest.stat().st_mtime_ns > report.stat().st_mtime_ns:
+        if not report.exists() or revision(root) > report.stat().st_mtime_ns:
             write_report(root)
 
     class Handler(SimpleHTTPRequestHandler):
@@ -48,6 +58,15 @@ def main() -> None:
             super().end_headers()
 
         def do_GET(self):
+            if urlsplit(self.path).path == '/revision':
+                data = str(revision(root)).encode()
+                self.send_response(200)
+                self.send_header('Content-Type', 'text/plain')
+                self.send_header('Cache-Control', 'no-store')
+                self.send_header('Content-Length', str(len(data)))
+                self.end_headers()
+                self.wfile.write(data)
+                return
             path = self._allowed()
             if path is None:
                 self.send_error(404)
