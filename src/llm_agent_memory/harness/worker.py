@@ -99,7 +99,8 @@ def main():
                     steps += 1
                     result = pack()
                 elif req['op'] == 'check':
-                    result = check_targets(env, req['targets'], req.get('fingers_may_touch', False))
+                    result = check_targets(env, req['targets'], req.get('fingers_may_touch', False),
+                                           req.get('carry',False))
                     wire.write(json.dumps(result) + '\n'); wire.flush(); continue
                 elif req['op'] == 'close':
                     break

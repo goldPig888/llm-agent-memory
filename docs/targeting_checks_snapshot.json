@@ -1,0 +1,47 @@
+{
+  "wrist_round_trip_error_px": 0.0,
+  "identity_preview": {
+    "verdict": "OK",
+    "carried_object_preview": false
+  },
+  "preview_restores_state": true,
+  "carry_without_contact": {
+    "verdict": "CARRY_UNVERIFIED",
+    "carried_object_preview": false
+  },
+  "bilateral_contact_fixture_found": true,
+  "attached_preview": {
+    "verdict": "OK",
+    "carried_object_preview": true
+  },
+  "attached_preview_restores_state": true,
+  "carried_obstacle_preview": {
+    "verdict": "COLLISION",
+    "waypoint": 1,
+    "contacts": [
+      [
+        "carried_object",
+        "scene_geometry"
+      ],
+      [
+        "carried_object",
+        "scene_geometry"
+      ],
+      [
+        "carried_object",
+        "scene_geometry"
+      ],
+      [
+        "carried_object",
+        "scene_geometry"
+      ],
+      [
+        "carried_object",
+        "scene_geometry"
+      ]
+    ],
+    "carried_object_preview": true
+  },
+  "obstacle_preview_restores_state": true,
+  "passed": true
+}

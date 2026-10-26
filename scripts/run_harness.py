@@ -3,6 +3,7 @@ import argparse
 import base64
 import fcntl
 import json
+import os
 import time
 from pathlib import Path
 
@@ -13,7 +14,7 @@ from llm_agent_memory.harness.upstream import SYSTEM_PROMPT, extract_curl
 from run_local import Capture, local_url
 
 
-def prompt():
+def prompt(profile='wrist-v3'):
     text=SYSTEM_PROMPT.replace('Gemini 4 Argon controlling a real 6-DoF YAM robot arm',
                                'Muse Glimmer controlling a simulated 7-DoF Panda robot arm')
     text=text.replace('A human operator previews every motion segment in 3D and must approve it\nbefore the arm moves. If they reject, their feedback is in the response --\nfollow it.',
@@ -22,6 +23,35 @@ def prompt():
                       'LIBERO world frame: x and y follow the calibrated grid, +z up.')
     text=text.replace('Overhead camera (calibrated)', 'Fixed agentview camera (calibrated; oblique rather than overhead)')
     text=text.replace('from stereo depth (noisy, ~1-2 cm)', 'from the simulated camera depth sensor')
+    if profile=='wrist-v3':
+        text=text.replace('deproject through the overhead image only.',
+            'choose camera="agentview" for coarse targeting or camera="wrist" for fine targeting.')
+        text=text.replace('of the LAST overhead image','of the selected camera image')
+        text=text.replace('approach_height=0.08','approach_height=0.05')
+        text=text.replace('Stay inside obs.workspace.', 'Stay inside x,y in [-0.6,0.6], z in [table_z,1.6].')
+        text+='''\n## Two-stage Panda targeting
+Agentview is oblique; a wrong height plane shifts world x,y substantially.
+Coarse: choose the requested object carefully, then use
+x,y,z=robot.deproject_depth(u=...,v=...,camera="agentview")
+and robot.goto(x=x,y=y,z=z+0.13,pitch_deg=90,yaw_deg=0).
+Depth returns the visible surface, not an object's center. The first move is
+only a hover: re-observe before descending. Confirm the actual wrist view is
+top-down and the object is visible; do not assume this for a tilted hand.
+Fine: click the object's top center in the full wrist image, then use
+x,y=robot.deproject(u=...,v=...,z_plane=...,camera="wrist").
+Each camera's normalized u,v are in its displayed image (top-left origin).
+Only agentview is cropped by look_at; wrist stays full-frame.
+Use the correct grasp height and bracket the object between the jaws.
+robot.grasp accepts support_z: record the support surface when known.
+After lift, visually verify object motion; holding alone is only a proxy.
+robot.place_relative(x=...,y=...,support_z=...,release_clearance=0.01,
+ yaw_deg=...,approach_height=0.05) uses the retained grasp's measured height
+offset. The destination support height must be chosen from observation; it
+does not infer basket floors, rim heights, or objects from hidden poses.
+At most two consecutive zoom-only plans are allowed. Choose a target and
+propose a hover or corrected action after that; repeated zooms waste calls.
+Use steps_remaining to plan: contact descent is slow only in its last 2 cm.
+'''
     start=text.index('- Reach:')
     end=text.index('- After a grasp',start)
     text=text[:start]+text[end:]
@@ -41,6 +71,9 @@ Keep # Thought short (40 words). On turn one include # Plan and granularity.
 Return one complete curl /obs or curl /plan with a complete heredoc. Do not return
 JSON, markdown code fences, unrelated shell commands, or simulator internals.
 '''
+    if profile=='wrist-v3':
+        text=text.replace('Camera pixel coordinates for deproject are normalized to the current cropped\nagentview image.',
+            'Camera pixel coordinates are normalized to the selected displayed image. Agentview is cropped; wrist is full-frame.')
     return text
 
 
@@ -50,7 +83,8 @@ def main():
     parser.add_argument('--append',action='store_true',help='Preserve earlier trials and append a new run')
     parser.add_argument('--trial-label',default='')
     parser.add_argument('--inits',type=int,nargs='+',default=list(range(10)),choices=range(50))
-    parser.add_argument('--effort',choices=['low','medium','high','xhigh'],default='xhigh')
+    parser.add_argument('--effort',choices=['low','medium','high','xhigh'],default='high')
+    parser.add_argument('--profile',choices=['legacy','wrist-v3'],default='wrist-v3')
     parser.add_argument('--max-calls',type=int,default=80)
     parser.add_argument('--max-steps',type=int,default=900)
     parser.add_argument('--max-output-tokens',type=int,default=16384)
@@ -70,6 +104,14 @@ def main():
         parser.error('output already contains a campaign; use a fresh directory')
     if any(r.get('status')=='running' for r in manifest.get('runs',[])):
         parser.error('Campaign has a running trial; inspect it before starting another')
+    model_root=Path(os.environ.get('MUSE_ROOT',
+        '/metadisk/may/muse-glimmer' if Path('/metadisk/may/muse-glimmer').exists()
+        else str(Path.home()/'.local/share/muse-glimmer')))
+    model_lock=(model_root/'.baseline_queue.lock').open('a')
+    try:
+        fcntl.flock(model_lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+    except BlockingIOError:
+        parser.error('Another baseline or pointing experiment is using the model')
     with httpx.Client(trust_env=False,timeout=30) as client:
         client.get(args.base_url+'/models').raise_for_status()
         response=client.get(args.base_url.removesuffix('/v1')+'/props')
@@ -77,7 +119,7 @@ def main():
         server=response.json()
     directory='task00_'+args.effort+'_'+time.strftime('%Y%m%d-%H%M%S')
     folder=root/directory; folder.mkdir()
-    system=prompt().replace('80 model decisions and 900 simulator steps',
+    system=prompt(args.profile).replace('80 model decisions and 900 simulator steps',
                            f'{args.max_calls} model decisions and {args.max_steps} simulator steps')
     protocol=dict(model='muse-glimmer',wire='chat',reasoning_effort=args.effort,task_id=0,
         task_name=LIBERO_10_TASKS[0][0],instruction=LIBERO_10_TASKS[0][1],initial_state_ids=args.inits,
@@ -92,12 +134,17 @@ def main():
         upstream_commit='470e1d2f943e3f8bb832b9aef28e4310e81344bc',
         memory='Full episode text history; latest two image pairs; fresh start each episode',
         checker_scope='Per-segment Cartesian IK and sampled joint contacts; no full-program preview or gripper sweep',
+        checker_version='bilateral-carry-preview-v3',
         holding_detection='Measured finger-gap proxy, no learned holding detector',
-        execution_profile=Session.execution_profile,trial_label=args.trial_label,
+        execution_profile='wrist-targeting-v3' if args.profile=='wrist-v3' else Session.execution_profile,
+        targeting_profile=args.profile,trial_label=args.trial_label,
+        compact_observations=args.profile=='wrist-v3',max_consecutive_look_only=2,
         server_context_tokens=server.get('default_generation_settings',{}).get('n_ctx'),
         server_generation_defaults=server.get('default_generation_settings',{}),
         server_build=server.get('build_info'),
         motion_settings=dict(descent_speed_m_s=.04,retract_speed_cap_m_s=.08,
+            fast_descent=args.profile=='wrist-v3',final_slow_descent_m=.02,
+            default_grasp_approach_height_m=.05 if args.profile=='wrist-v3' else .08,
             gripper_max_steps=20,settle_max_steps=5,
             measured_position_tolerance_m=.004,measured_orientation_tolerance_deg=2))
     (folder/'protocol.json').write_text(json.dumps(protocol,indent=2))
@@ -112,7 +159,9 @@ def main():
     try:
         for ep,state in enumerate(args.inits):
             episode_folder=folder/f'episode_{ep:02d}'; episode_folder.mkdir()
-            session=Session(episode_folder,args.max_steps)
+            session=Session(episode_folder,args.max_steps,
+                compact_observations=args.profile=='wrist-v3',
+                efficient_contact=args.profile=='wrist-v3')
             transport=Capture(folder/'api',args.effort,max_tokens=args.max_output_tokens); transport.episode=ep
             messages=[dict(role='system',content=system)]
             error=None
@@ -141,7 +190,7 @@ def main():
                         else:
                             try:
                                 endpoint,code=extract_curl(text)
-                                if endpoint=='obs': session.feedback='New observation requested; no motion.'
+                                if endpoint=='obs': session.request_observation()
                                 else: session.execute(code)
                             except (ValueError,ArithmeticError) as exc:
                                 session.feedback='plan_error: '+str(exc)

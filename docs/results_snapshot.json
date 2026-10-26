@@ -1,17 +1,15 @@
 {
-  "captured_utc": "2026-10-26T16:29:57.332790+00:00",
+  "captured_utc": "2026-10-26T19:21:07.721030+00:00",
   "snapshot_only": true,
   "baseline": {
-    "campaign_status": "running",
+    "campaign_status": "finished",
     "queued_episodes": 100,
     "queue_status_counts": {
-      "finished": 88,
-      "running": 1,
-      "pending": 11
+      "finished": 100
     },
     "totals": {
-      "recorded_attempts": 88,
-      "failure": 87,
+      "recorded_attempts": 100,
+      "failure": 99,
       "successes": 0,
       "error": 1
     },
@@ -58,8 +56,13 @@
         "successes": 0
       },
       "8": {
-        "recorded_attempts": 8,
-        "failure": 8,
+        "recorded_attempts": 10,
+        "failure": 10,
+        "successes": 0
+      },
+      "9": {
+        "recorded_attempts": 10,
+        "failure": 10,
         "successes": 0
       }
     },

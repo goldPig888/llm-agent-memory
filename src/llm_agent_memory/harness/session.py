@@ -2,6 +2,7 @@
 import io
 import json
 import math
+import copy
 from pathlib import Path
 
 import numpy as np
@@ -22,7 +23,8 @@ def panda_orientation(yaw, pitch=90., azimuth=0., roll=0.):
 
 class Session:
     execution_profile = 'measured-settling-v2'
-    def __init__(self, folder, max_steps=900):
+    def __init__(self, folder, max_steps=900, compact_observations=False,
+                 max_look_only=2, efficient_contact=False):
         self.folder = Path(folder)
         self.robot = HarnessEmbodiment(task_id=0, output_dir=self.folder)
         self.max_steps = max_steps
@@ -36,12 +38,36 @@ class Session:
         self.holding = False
         self.feedback = 'Ready'
         self.motion_log = []
+        self.compact_observations=compact_observations
+        self.max_look_only=max_look_only
+        self.look_only_count=0
+        self.efficient_contact=efficient_contact
+        self.grasp_offset=None
+        self.last_check=None
+        self.grasp_approach=None
+        self.signatures=copy.deepcopy(SIGNATURES)
+        if efficient_contact:
+            self.execution_profile='wrist-targeting-v3'
+            self.signatures['grasp']['approach_height']=.05
 
     def reset(self, scene):
         self.robot.reset(scene)
         self.last = self.robot.last
         self.grid_z = self.last['table_z']
         self.home = np.array(self.last['eef_state'][:9])
+        if self.efficient_contact and self.last.get('table_corners'):
+            pixels=[project(p,self.last['cameras']['agentview']) for p in self.last['table_corners']]
+            if all(p is not None for p in pixels):
+                pixels=np.asarray(pixels);low=np.floor(pixels.min(axis=0)-20).astype(int)
+                high=np.ceil(pixels.max(axis=0)+20).astype(int)
+                low=np.clip(low,0,480);high=np.clip(high,low+32,512)
+                self.crop=(*low.tolist(),*high.tolist())
+
+    def request_observation(self):
+        self.look_only_count+=1
+        self.feedback=('observation_limit: propose a pixel target and hover/motion next; '
+            'additional observation-only turns do not improve geometry.' if self.look_only_count>self.max_look_only
+            else 'New observation requested; no motion.')
 
     def observe(self, call):
         d = self.last
@@ -57,6 +83,17 @@ class Session:
                      crop_pixels=self.crop, world_frame='LIBERO world, meters, +z up')
         if self.last_target:
             state['tracking_error_m'] = float(np.linalg.norm(position - np.array(self.last_target[:3])))
+        state['camera_targeting']={'agentview':{'crop_pixels':self.crop},
+            'wrist':{'crop_pixels':[0,0,512,512]}}
+        for alias,name in [('agentview','agentview'),('wrist','robot0_eye_in_hand')]:
+            axis=np.asarray(d['cameras'][name]['R'])[:,2]
+            state['camera_targeting'][alias]['angle_below_horizontal_deg']=round(
+                float(np.rad2deg(np.arctan2(abs(axis[2]),np.linalg.norm(axis[:2])))),2)
+        state['look_only_turns']=self.look_only_count
+        state['grasp_height_offset_m']=self.grasp_offset
+        if self.compact_observations:
+            for field in ('joint_positions','workspace','world_frame','max_steps','holding_estimate','execution_profile'):
+                state.pop(field,None)
         images = []
         for name, key in [('agentview','agentview_image'),('robot0_eye_in_hand','robot0_eye_in_hand_image')]:
             crop = self.crop if name == 'agentview' else (0,0,512,512)
@@ -67,16 +104,25 @@ class Session:
             buf=io.BytesIO(); image.save(buf,format='PNG'); images.append(buf.getvalue())
         return state, images
 
-    def deproject(self, u, v, z_plane):
-        return deproject(u,v,z_plane,self.last['cameras']['agentview'],self.crop)
+    def _camera(self,camera):
+        if camera=='agentview': return 'agentview',self.crop
+        if camera=='wrist': return 'robot0_eye_in_hand',(0,0,512,512)
+        raise ValueError('camera must be agentview or wrist')
 
-    def deproject_depth(self, u, v):
+    def deproject(self, u, v, z_plane, camera='agentview'):
+        name,crop=self._camera(camera)
+        return deproject(u,v,z_plane,self.last['cameras'][name],crop)
+
+    def deproject_depth(self, u, v, camera='agentview'):
         if not 0 <= u <= 1 or not 0 <= v <= 1:
             raise ValueError('pixels must be normalized 0..1')
-        px = self.crop[0]+u*(self.crop[2]-self.crop[0]-1)
-        py = self.crop[1]+v*(self.crop[3]-self.crop[1]-1)
-        cam=self.last['cameras']['agentview']
-        depth=float(np.asarray(self.last['depths']['agentview'])[int(round(py)),int(round(px))])
+        name,crop=self._camera(camera)
+        px = crop[0]+u*(crop[2]-crop[0]-1)
+        py = crop[1]+v*(crop[3]-crop[1]-1)
+        cam=self.last['cameras'][name]
+        depth=float(np.asarray(self.last['depths'][name])[int(round(py)),int(round(px))])
+        if not np.isfinite(depth) or depth<=0:
+            raise ValueError('invalid rendered depth at selected pixel')
         ray=np.linalg.solve(cam['K'],[px,py,1.])
         return tuple(np.asarray(cam['position'])+np.asarray(cam['R']) @ (depth*ray))
 
@@ -156,7 +202,9 @@ class Session:
         def at(f):
             return np.r_[initial[:3]+(xyz-initial[:3])*f,slerp(f).as_matrix()[:,:2].T.reshape(-1)]
         waypoints=[at(f).tolist() for f in np.linspace(0,1,n+1)[1:]]
-        check=self.robot._rpc({'op':'check','targets':waypoints,'fingers_may_touch':fingers or guard is not None})
+        check=self.robot._rpc({'op':'check','targets':waypoints,'fingers_may_touch':fingers or guard is not None,
+                               'carry':self.holding})
+        self.last_check=check
         if check['verdict']!='OK':
             raise ValueError(check['verdict'])
         grip=float(self.last['eef_state'][9])
@@ -191,7 +239,14 @@ class Session:
             raise ValueError('blocked')
 
     def execute(self, code):
-        calls=parse_plan(code,SIGNATURES,{'deproject':self.deproject,'deproject_depth':self.deproject_depth})
+        calls=parse_plan(code,self.signatures,{'deproject':self.deproject,'deproject_depth':self.deproject_depth})
+        look_only=all(call.name=='look_at' for call in calls)
+        if look_only and self.look_only_count>=self.max_look_only:
+            self.feedback=json.dumps(dict(status='observation_limit',
+                message='Choose a pixel target and propose a hover/motion; another zoom-only turn was not executed.',
+                steps_remaining=max(0,self.max_steps-self.steps)))
+            return self.feedback
+        self.look_only_count=self.look_only_count+1 if look_only else 0
         executed=[]
         try:
             for call in calls:
@@ -227,12 +282,22 @@ class Session:
                 elif n=='move_until_contact':
                     self._move(np.array(self.last['eef_state'][:3])+[0,0,k['dz']],speed=k['speed'],guard=k['max_lag'])
                     self._move(np.array(self.last['eef_state'][:3])+[0,0,k['relief']],speed=k['speed'],fingers=True)
-                elif n in ('grasp','place','place_until_contact'):
+                elif n in ('grasp','place','place_until_contact','place_relative'):
                     grasp=n=='grasp'
+                    if n=='place_relative':
+                        if self.grasp_offset is None or not self.holding:
+                            raise ValueError('place_relative requires a retained grasp with recorded support height')
+                        current=np.asarray(self.last['eef_state'][3:9]).reshape(2,3).T
+                        approach=np.cross(current[:,0],current[:,1])
+                        if self.grasp_approach is None or abs(approach[2])<.94 or np.dot(approach,self.grasp_approach)<.985:
+                            raise ValueError('grasp height offset is invalid after a tilt; use explicit place height')
+                        k['z']=k['support_z']+self.grasp_offset+k['release_clearance']
                     r=self._rotation(k['yaw_deg'],k.get('pitch_deg',math.nan),k.get('azimuth_deg',math.nan))
                     if grasp: self._gripper(False)
                     self._move([k['x'],k['y'],k['z']+k['approach_height']],r,k['speed'])
                     descent_z=max(self.last['table_z'],k['z']-.02) if n=='place_until_contact' else k['z']
+                    if self.efficient_contact and descent_z+.02<self.last['eef_state'][2]:
+                        self._move([k['x'],k['y'],descent_z+.02],r,min(k['speed'],.08),fingers=True)
                     self._move([k['x'],k['y'],descent_z],r,.04,fingers=True,
                                guard=k.get('max_lag') if n=='place_until_contact' else None)
                     if self.done: break
@@ -241,16 +306,24 @@ class Session:
                     self._gripper(grasp)
                     if grasp and not self.holding:
                         raise ValueError('grasp_failed')
+                    if grasp:
+                        support=k.get('support_z',math.nan)
+                        self.grasp_offset=(float(self.last['eef_state'][2])-support
+                            if np.isfinite(support) else None)
+                        columns=np.asarray(self.last['eef_state'][3:9]).reshape(2,3).T
+                        self.grasp_approach=np.cross(columns[:,0],columns[:,1])
+                    else:
+                        self.grasp_offset=None
                     self._move([k['x'],k['y'],k['z']+k['approach_height']],r,
                                min(k['speed'],.08),fingers=True)
                 else:
                     raise ValueError('unsupported primitive')
-                executed.append(dict(primitive=n,arguments={a:v for a,v in k.items() if np.isfinite(v)},
+                executed.append(dict(primitive=n,arguments={a:v for a,v in k.items() if isinstance(v,str) or np.isfinite(v)},
                                      holding=self.holding,steps_used=self.steps-start_step))
             status='success' if self.success else 'completed'
         except (ValueError,np.linalg.LinAlgError) as error:
             status=str(error)
-        self.feedback=json.dumps(dict(status=status,executed=executed,
+        self.feedback=json.dumps(dict(status=status,executed=executed,check=self.last_check,
                                       steps_remaining=max(0,self.max_steps-self.steps)))
         return self.feedback
 

@@ -1,0 +1,11 @@
+{
+  "file": "mmproj-Muse-Glimmer-30B-Q4_K_M.gguf",
+  "tensor_types": {
+    "F32": 506,
+    "Q4_K": 200,
+    "Q6_K": 100,
+    "BF16": 3
+  },
+  "quantized": true,
+  "note": "Dequantizing an existing quantized projector does not restore lost precision."
+}

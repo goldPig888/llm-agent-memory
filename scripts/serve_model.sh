@@ -11,7 +11,7 @@ if [ -n "${GPU_SPLIT:-}" ]; then
 fi
 exec "$MUSE_ROOT/llama.cpp/build-cuda128/bin/llama-server" \
   -m "$MUSE_ROOT/models/Muse-Glimmer-30B-KQuant-17GB-Q4_K_M.gguf" \
-  --mmproj "$MUSE_ROOT/models/mmproj-Muse-Glimmer-30B-Q4_K_M.gguf" \
+  --mmproj "${MUSE_MMPROJ:-$MUSE_ROOT/models/mmproj-Muse-Glimmer-30B-Q4_K_M.gguf}" \
   --alias muse-glimmer --host 127.0.0.1 --port 8081 \
   --n-gpu-layers 99 --split-mode layer "${split_args[@]}" \
   --ctx-size 131072 --parallel 1 --jinja \

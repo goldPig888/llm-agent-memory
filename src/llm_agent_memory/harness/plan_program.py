@@ -9,7 +9,8 @@ machine, so this walks the AST and accepts only:
   * `name = robot.<pure primitive>(...)` / `a, b = robot.<pure primitive>(...)`
   * `name = expr`
 where expr is a number, a variable assigned earlier, unary -/+, or + - * / of
-those. Anything else is rejected with a message the model can act on.
+those. The Panda adaptation additionally accepts the camera literals
+"agentview" and "wrist" for deprojection only. Other strings are rejected.
 
 Pure primitives (deproject*) are evaluated during parsing since they depend
 only on the last observation, never on motion -- that's what lets the whole
@@ -32,7 +33,7 @@ class PlanError(ValueError):
 @dataclass
 class Call:
     name: str
-    kwargs: dict[str, float]
+    kwargs: dict[str, float | str]
     line: int
     source: str
     arm: str = "robot"  # which receiver: "robot" (single-arm) or "left"/"right"
@@ -85,12 +86,18 @@ def parse_plan(code: str, signatures: dict[str, dict[str, float | None]],
         sig = signatures[name]
         if len(node.args) > len(sig):
             raise PlanError(f"line {node.lineno}: robot.{name} got too many positional args")
-        kwargs = {p: value(a) for p, a in zip(sig, node.args)}
+        def argument(param,node):
+            if param=='camera' and name in ('deproject','deproject_depth'):
+                if not (isinstance(node,ast.Constant) and node.value in ('agentview','wrist')):
+                    raise PlanError('camera must be the literal "agentview" or "wrist"')
+                return node.value
+            return value(node)
+        kwargs = {p: argument(p,a) for p, a in zip(sig, node.args)}
         for kw in node.keywords:
             if kw.arg is None or kw.arg not in sig:
                 raise PlanError(f"line {node.lineno}: robot.{name} has no parameter '{kw.arg}'; "
                                 f"parameters: {', '.join(sig)}")
-            kwargs[kw.arg] = value(kw.value)
+            kwargs[kw.arg] = argument(kw.arg,kw.value)
         for p, default in sig.items():
             if p not in kwargs:
                 if default is None:
