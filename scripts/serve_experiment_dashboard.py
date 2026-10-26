@@ -13,12 +13,15 @@ from experiment_report import write_report
 
 
 def revision(root):
-    paths = [root / 'campaign.json', Path(__file__).with_name('experiment_report.py')]
+    paths = [root / 'campaign.json', root / 'watchdog_status.json', Path(__file__).with_name('experiment_report.py')]
     manifest = json.loads((root / 'campaign.json').read_text())
     for run in manifest.get('runs', []):
         folder = (root / run['directory']).resolve()
         if folder.is_relative_to(root.resolve()):
             paths.extend([folder / 'api/api_usage.jsonl', folder / 'summary.json'])
+            paths.extend(folder.glob('episode_*/turns.jsonl'))
+            paths.extend(folder.glob('episode_*/motion.jsonl'))
+            paths.extend(folder.glob('episode_*/observations/call*.png'))
     return max((p.stat().st_mtime_ns for p in paths if p.exists()), default=0)
 
 
@@ -48,12 +51,14 @@ def main() -> None:
             target = (root / relative).resolve()
             if not target.is_relative_to(root):
                 return None
-            if path not in {'/report.html', '/episodes.csv', '/results.json', '/campaign.json'} and target.name != 'rollout.mp4':
+            observation = (target.suffix == '.png' and target.parent.name == 'observations'
+                           and target.name.startswith('call'))
+            if path not in {'/report.html', '/episodes.csv', '/results.json', '/campaign.json', '/watchdog_status.json'} and target.name != 'rollout.mp4' and not observation:
                 return None
             return path
 
         def end_headers(self):
-            if self._allowed() in {'/report.html', '/episodes.csv', '/results.json', '/campaign.json'}:
+            if self._allowed() in {'/report.html', '/episodes.csv', '/results.json', '/campaign.json', '/watchdog_status.json'}:
                 self.send_header('Cache-Control', 'no-store, max-age=0')
             super().end_headers()
 

@@ -1,0 +1,9 @@
+[Unit]
+Description=Check and recover the Muse Glimmer baseline
+
+[Service]
+Type=oneshot
+WorkingDirectory=@PROJECT_ROOT@
+Environment=PYTHONPATH=src
+ExecStart=@PYTHON@ @PROJECT_ROOT@/scripts/watch_baseline.py --output @CAMPAIGN_ROOT@
+TimeoutStartSec=45

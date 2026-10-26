@@ -1,0 +1,104 @@
+{
+  "captured_utc": "2026-10-26T16:29:57.332790+00:00",
+  "snapshot_only": true,
+  "baseline": {
+    "campaign_status": "running",
+    "queued_episodes": 100,
+    "queue_status_counts": {
+      "finished": 88,
+      "running": 1,
+      "pending": 11
+    },
+    "totals": {
+      "recorded_attempts": 88,
+      "failure": 87,
+      "successes": 0,
+      "error": 1
+    },
+    "per_task": {
+      "0": {
+        "recorded_attempts": 10,
+        "failure": 9,
+        "successes": 0,
+        "error": 1
+      },
+      "1": {
+        "recorded_attempts": 10,
+        "failure": 10,
+        "successes": 0
+      },
+      "2": {
+        "recorded_attempts": 10,
+        "failure": 10,
+        "successes": 0
+      },
+      "3": {
+        "recorded_attempts": 10,
+        "failure": 10,
+        "successes": 0
+      },
+      "4": {
+        "recorded_attempts": 10,
+        "failure": 10,
+        "successes": 0
+      },
+      "5": {
+        "recorded_attempts": 10,
+        "failure": 10,
+        "successes": 0
+      },
+      "6": {
+        "recorded_attempts": 10,
+        "failure": 10,
+        "successes": 0
+      },
+      "7": {
+        "recorded_attempts": 10,
+        "failure": 10,
+        "successes": 0
+      },
+      "8": {
+        "recorded_attempts": 8,
+        "failure": 8,
+        "successes": 0
+      }
+    },
+    "reasoning": "xhigh",
+    "response_token_cap": 16384,
+    "harness": false
+  },
+  "harness_trials": [
+    {
+      "trial": "task00_xhigh_20261024-154707",
+      "queue_status": "interrupted",
+      "profile": "original",
+      "context": null,
+      "results": [
+        {
+          "episode": 0,
+          "init_state": 0,
+          "status": "failure",
+          "environment_success": false,
+          "steps": 900,
+          "api_attempts": 26
+        }
+      ]
+    },
+    {
+      "trial": "efficiency-v2-state0",
+      "queue_status": "interrupted",
+      "profile": "measured-settling-v2",
+      "context": 32768,
+      "results": [
+        {
+          "episode": 0,
+          "init_state": 0,
+          "status": "error",
+          "environment_success": false,
+          "steps": 48,
+          "api_attempts": 12
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,8 @@
 # Muse Glimmer on LIBERO-10, locally
 
+For the experiment configurations, implementation map, saved results summary,
+and known limitations, start with [the experiment review guide](docs/EXPERIMENTS.md).
+
 Evaluate Meta Muse Glimmer with RGB observations and structured robot tool calls.
 Inference runs on this machine; no Codex sessions or hosted inference credentials.
 The pinned LLM-LIBERO tasks, prompts, motion adapter, and simulator success checker
@@ -72,7 +75,7 @@ Point the viewer at the same `--output` directory used by the runner. Its
 The model endpoint is `http://127.0.0.1:8081/v1`. The runner rejects non-loopback
 endpoints and does not inherit cloud keys. The local endpoint uses an HTTP
 chat interface; it does not send requests to a paid provider.
-Use `--effort low|medium|high`, `--image-horizon`, `--max-output-tokens`, and
+Use `--effort low|medium|high|xhigh`, `--image-horizon`, `--max-output-tokens`, and
 `--output` to configure runs. The server has one 131,072-token slot; requests
 that exceed context or truncate output must be investigated rather than
 silently counted as valid policy comparisons. Protocol metadata records limits.
@@ -92,6 +95,23 @@ On this machine `outputs/muse` points to `/metadisk/may/muse-glimmer/results`
 to leave the main disk free. A separate `outputs/muse_smoke` stores the one-call
 setup check; it is excluded from the benchmark viewer and exports.
 A fake/smoke run is not a benchmark result.
+
+## Open Gemini harness experiment
+
+Task 0, states 0–9, local Muse Glimmer xhigh:
+
+```bash
+python scripts/run_harness.py --output outputs/muse_harness_xhigh --effort xhigh
+python scripts/serve_experiment_dashboard.py --output outputs/muse_harness_xhigh --port 8767
+```
+
+This uses calibrated overlays, pixel deprojection, zoom, structured motion
+primitives, and automatic Panda motion checks. It is a single-Panda LIBERO
+adaptation, not an exact reproduction of the original hardware harness.
+See [provenance and differences](src/llm_agent_memory/harness/UPSTREAM.md).
+It retains full episode text and the latest two image pairs, starts fresh each
+episode, and uses the simulator's success predicate. Results are separate from
+the paper baseline. The viewer refreshes as calls and actions finish.
 
 ## Google Drive export and upload
 

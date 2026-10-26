@@ -1,0 +1,12 @@
+[Unit]
+Description=Muse Glimmer baseline results viewer
+
+[Service]
+Type=simple
+WorkingDirectory=@PROJECT_ROOT@
+ExecStart=@PYTHON@ -u @PROJECT_ROOT@/scripts/serve_experiment_dashboard.py --output @CAMPAIGN_ROOT@ --port 8768
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
