@@ -6,10 +6,10 @@ kept in separate campaigns, and an attempt's files are never overwritten.
 | Setting | Original-policy baseline | Adapted robot harness |
 |---|---|---|
 | Model | Muse Glimmer 30B, official Q4_K_M | Same model |
-| Reasoning | xhigh | xhigh in recorded trials |
+| Reasoning | xhigh | Early xhigh; v3 and ablations high |
 | Task coverage | Tasks 0–9, states 0–9: 100 episodes | Task 0 exploratory trials |
 | Robot interface | Original `move_to`, `done`, `give_up` | Parsed programs of motion primitives |
-| Images | Raw agentview + wrist, 256×256 | Calibrated overlays, 512×512 |
+| Images | Raw agentview + wrist, 256×256 | 512×512; overlays or clean RGB by variant |
 | Image history | Latest two observations | Latest two observations |
 | Text history | Full episode; fresh policy each episode | Full episode; fresh context each episode |
 | Limits | 80 model calls, 900 physics steps, 20 Hz | Same call/physics limits |
@@ -48,6 +48,10 @@ successes included human motion review; our recorded trials use automatic
 checks. Their tasks, camera geometry and model also differ.
 
 ## Results available for review
+
+See [latest results and interpretation](LATEST_RESULTS.md),
+[ablation protocols](HARNESS_ABLATIONS.md), [ablation results](harness_ablation_results.json),
+and [pointing results](pointing_results_snapshot.json).
 
 - [Snapshot metadata and aggregate results](results_snapshot.json)
 - [Per-state baseline snapshot](baseline_results_snapshot.csv)

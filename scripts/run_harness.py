@@ -2,6 +2,7 @@
 import argparse
 import base64
 import fcntl
+import hashlib
 import json
 import os
 import time
@@ -12,6 +13,7 @@ from inspect_robots_libero.tasks import libero_10_task, LIBERO_10_TASKS
 from llm_agent_memory.harness.session import Session
 from llm_agent_memory.harness.upstream import SYSTEM_PROMPT, extract_curl
 from run_local import Capture, local_url
+from llm_agent_memory.harness.experiments import VARIANTS, RecoveryMonitor, image_instructions
 
 
 def prompt(profile='wrist-v3'):
@@ -85,12 +87,15 @@ def main():
     parser.add_argument('--inits',type=int,nargs='+',default=list(range(10)),choices=range(50))
     parser.add_argument('--effort',choices=['low','medium','high','xhigh'],default='high')
     parser.add_argument('--profile',choices=['legacy','wrist-v3'],default='wrist-v3')
+    parser.add_argument('--variant',choices=list(VARIANTS),default='control')
+    parser.add_argument('--generation-seed',type=int,default=None)
     parser.add_argument('--max-calls',type=int,default=80)
     parser.add_argument('--max-steps',type=int,default=900)
     parser.add_argument('--max-output-tokens',type=int,default=16384)
     parser.add_argument('--base-url',type=local_url,default='http://127.0.0.1:8081/v1')
     args=parser.parse_args()
     if min(args.max_calls,args.max_steps,args.max_output_tokens)<1: parser.error('limits must be positive')
+    variant=VARIANTS[args.variant]
     root=args.output.resolve(); root.mkdir(parents=True,exist_ok=True)
     trial_lock=(root/'.trial.lock').open('a')
     try:
@@ -119,7 +124,7 @@ def main():
         server=response.json()
     directory='task00_'+args.effort+'_'+time.strftime('%Y%m%d-%H%M%S')
     folder=root/directory; folder.mkdir()
-    system=prompt(args.profile).replace('80 model decisions and 900 simulator steps',
+    system=image_instructions(prompt(args.profile),variant['clean_images']).replace('80 model decisions and 900 simulator steps',
                            f'{args.max_calls} model decisions and {args.max_steps} simulator steps')
     protocol=dict(model='muse-glimmer',wire='chat',reasoning_effort=args.effort,task_id=0,
         task_name=LIBERO_10_TASKS[0][0],instruction=LIBERO_10_TASKS[0][1],initial_state_ids=args.inits,
@@ -138,6 +143,12 @@ def main():
         holding_detection='Measured finger-gap proxy, no learned holding detector',
         execution_profile='wrist-targeting-v3' if args.profile=='wrist-v3' else Session.execution_profile,
         targeting_profile=args.profile,trial_label=args.trial_label,
+        experiment_variant=args.variant,experiment_switches=variant,
+        experiment_source_sha256={str(p.relative_to(Path(__file__).resolve().parents[1])):
+            hashlib.sha256(p.read_bytes()).hexdigest() for p in
+            [Path(__file__).resolve(),Path(__file__).resolve().parents[1]/'src/llm_agent_memory/harness/session.py',
+             Path(__file__).resolve().parents[1]/'src/llm_agent_memory/harness/experiments.py']},
+        generation_seed=args.generation_seed,seed_schedule='base + decision number' if args.generation_seed is not None else None,
         compact_observations=args.profile=='wrist-v3',max_consecutive_look_only=2,
         server_context_tokens=server.get('default_generation_settings',{}).get('n_ctx'),
         server_generation_defaults=server.get('default_generation_settings',{}),
@@ -161,16 +172,20 @@ def main():
             episode_folder=folder/f'episode_{ep:02d}'; episode_folder.mkdir()
             session=Session(episode_folder,args.max_steps,
                 compact_observations=args.profile=='wrist-v3',
-                efficient_contact=args.profile=='wrist-v3')
+                efficient_contact=args.profile=='wrist-v3',clean_images=variant['clean_images'],
+                image_tone=variant.get('image_tone','identity'))
             transport=Capture(folder/'api',args.effort,max_tokens=args.max_output_tokens); transport.episode=ep
             messages=[dict(role='system',content=system)]
             error=None
+            monitor=RecoveryMonitor() if variant['recovery'] else None
             try:
                 session.reset(libero_10_task(0,num_scenes=1,start=state).scenes[0])
                 with httpx.Client(transport=transport,trust_env=False,timeout=1800) as client:
                     for call in range(1,args.max_calls+1):
                         start_step=session.steps
+                        image_context=(session.crop,session.steps)
                         obs,images=session.observe(call)
+                        if monitor and monitor.advice(): obs['recovery']=monitor.advice()
                         content=[dict(type='text',text='Task: '+LIBERO_10_TASKS[0][1]+'\nObservation:\n'+json.dumps(obs))]
                         for name,image in zip(['agentview','wrist'],images):
                             content.extend([dict(type='text',text=name+' camera'),dict(type='image_url',image_url=dict(url='data:image/png;base64,'+base64.b64encode(image).decode()))])
@@ -181,19 +196,26 @@ def main():
                             if isinstance(messages[i]['content'],list):
                                 messages[i]['content']=[p for p in messages[i]['content'] if p['type']!='image_url']
                         body=dict(model='muse-glimmer',messages=messages)
+                        if args.generation_seed is not None: body['seed']=args.generation_seed+call
                         response=client.post(args.base_url+'/chat/completions',json=body)
                         response.raise_for_status(); payload=response.json(); choice=payload['choices'][0]
                         message=choice['message']; text=message.get('content') or ''
                         messages.append(dict(role='assistant',content=text))
+                        code=None
                         if choice.get('finish_reason')=='length':
                             session.feedback='Response truncated; nothing executed. Return a shorter complete command.'
                         else:
                             try:
                                 endpoint,code=extract_curl(text)
                                 if endpoint=='obs': session.request_observation()
-                                else: session.execute(code)
+                                else:
+                                    rejection=monitor.before(code,session.last['eef_state'][:9],image_context) if monitor else None
+                                    if rejection: session.feedback=rejection
+                                    else: session.execute(code)
                             except (ValueError,ArithmeticError) as exc:
                                 session.feedback='plan_error: '+str(exc)
+                        if monitor:
+                            monitor.after(code,session.feedback,start_step,session.steps,session.last['eef_state'][:9],image_context)
                         with (episode_folder/'turns.jsonl').open('a') as log:
                             log.write(json.dumps(dict(call=call,start_step=start_step,step=session.steps,
                                 response=text,feedback=session.feedback))+'\n')

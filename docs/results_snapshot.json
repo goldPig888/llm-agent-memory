@@ -1,5 +1,5 @@
 {
-  "captured_utc": "2026-10-26T19:21:07.721030+00:00",
+  "captured_utc": "2026-10-27T17:09:20.751164+00:00",
   "snapshot_only": true,
   "baseline": {
     "campaign_status": "finished",
@@ -75,6 +75,8 @@
       "trial": "task00_xhigh_20261024-154707",
       "queue_status": "interrupted",
       "profile": "original",
+      "effort": "xhigh",
+      "variant": null,
       "context": null,
       "results": [
         {
@@ -83,7 +85,8 @@
           "status": "failure",
           "environment_success": false,
           "steps": 900,
-          "api_attempts": 26
+          "api_attempts": 26,
+          "stop_detail": null
         }
       ]
     },
@@ -91,6 +94,8 @@
       "trial": "efficiency-v2-state0",
       "queue_status": "interrupted",
       "profile": "measured-settling-v2",
+      "effort": "xhigh",
+      "variant": null,
       "context": 32768,
       "results": [
         {
@@ -99,9 +104,116 @@
           "status": "error",
           "environment_success": false,
           "steps": 48,
-          "api_attempts": 12
+          "api_attempts": 12,
+          "stop_detail": "HTTPStatusError(\"Client error '400 Bad Request' for url 'http://127.0.0.1:8081/v1/chat/completions'\\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400\")"
         }
       ]
+    },
+    {
+      "trial": "wrist-v3-high-state0",
+      "queue_status": "completed",
+      "profile": "wrist-targeting-v3",
+      "effort": "high",
+      "variant": null,
+      "context": 131072,
+      "results": [
+        {
+          "episode": 0,
+          "init_state": 0,
+          "status": "failure",
+          "environment_success": false,
+          "steps": 580,
+          "api_attempts": 80,
+          "stop_detail": null
+        }
+      ]
+    },
+    {
+      "trial": "general-ablation-v1-control",
+      "queue_status": "completed",
+      "profile": "wrist-targeting-v3",
+      "effort": "high",
+      "variant": "control",
+      "context": 131072,
+      "results": [
+        {
+          "episode": 0,
+          "init_state": 0,
+          "status": "failure",
+          "environment_success": false,
+          "steps": 872,
+          "api_attempts": 80,
+          "stop_detail": null
+        }
+      ]
+    },
+    {
+      "trial": "general-ablation-v1-recovery",
+      "queue_status": "completed",
+      "profile": "wrist-targeting-v3",
+      "effort": "high",
+      "variant": "recovery",
+      "context": 131072,
+      "results": [
+        {
+          "episode": 0,
+          "init_state": 0,
+          "status": "failure",
+          "environment_success": false,
+          "steps": 900,
+          "api_attempts": 73,
+          "stop_detail": null
+        }
+      ]
+    },
+    {
+      "trial": "general-ablation-v1-clean-images",
+      "queue_status": "completed",
+      "profile": "wrist-targeting-v3",
+      "effort": "high",
+      "variant": "clean-images",
+      "context": 131072,
+      "results": [
+        {
+          "episode": 0,
+          "init_state": 0,
+          "status": "failure",
+          "environment_success": false,
+          "steps": 900,
+          "api_attempts": 41,
+          "stop_detail": null
+        }
+      ]
+    },
+    {
+      "trial": "general-ablation-v1-combined",
+      "queue_status": "completed",
+      "profile": "wrist-targeting-v3",
+      "effort": "high",
+      "variant": "combined",
+      "context": 131072,
+      "results": [
+        {
+          "episode": 0,
+          "init_state": 0,
+          "status": "failure",
+          "environment_success": false,
+          "steps": 894,
+          "api_attempts": 33,
+          "stop_detail": null
+        }
+      ]
+    },
+    {
+      "trial": "visual-ablation-v1-clean-images",
+      "queue_status": "running",
+      "profile": "wrist-targeting-v3",
+      "effort": "high",
+      "variant": "clean-images",
+      "context": 131072,
+      "results": []
     }
-  ]
+  ],
+  "harness_ablation_results": "harness_ablation_results.json",
+  "pointing_results": "pointing_results_snapshot.json"
 }

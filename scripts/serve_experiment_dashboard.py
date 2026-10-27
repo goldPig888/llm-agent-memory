@@ -10,6 +10,7 @@ import threading
 from urllib.parse import unquote, urlsplit
 
 from experiment_report import write_report
+from ablation_report import collect_ablations,render_ablations
 
 
 def revision(root):
@@ -63,6 +64,16 @@ def main() -> None:
             super().end_headers()
 
         def do_GET(self):
+            if urlsplit(self.path).path in {'/ablations.html','/ablations.json'}:
+                data=collect_ablations(root)
+                rendered=(json.dumps(data).encode() if urlsplit(self.path).path.endswith('.json')
+                          else render_ablations(data))
+                self.send_response(200)
+                self.send_header('Content-Type','application/json' if urlsplit(self.path).path.endswith('.json') else 'text/html; charset=utf-8')
+                self.send_header('Cache-Control','no-store')
+                self.send_header('Content-Length',str(len(rendered)))
+                self.end_headers();self.wfile.write(rendered)
+                return
             if urlsplit(self.path).path == '/revision':
                 data = str(revision(root)).encode()
                 self.send_response(200)

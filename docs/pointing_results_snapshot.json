@@ -1,0 +1,26 @@
+{
+  "captured_utc": "2026-10-27T17:09:20.751164+00:00",
+  "snapshot_only": true,
+  "groups": {
+    "glimmer/agentview": {
+      "samples": 50,
+      "visible": 50,
+      "hits": 22,
+      "parse_errors": 0,
+      "hit_rate": 0.44,
+      "abstentions": 8
+    },
+    "glimmer/wrist": {
+      "samples": 50,
+      "visible": 50,
+      "hits": 9,
+      "parse_errors": 0,
+      "hit_rate": 0.18,
+      "abstentions": 41
+    }
+  },
+  "samples": 100,
+  "physics_steps": 0,
+  "api_cost_upper_bound_usd": 0.0,
+  "note": "Visible-object mask hits, not manipulation success. Wrist images are from the initial pose."
+}

@@ -44,4 +44,426 @@ efficiency-v2-state0,measured-settling-v2,0,7,48,48,0,completed,"robot.look_at(x
 efficiency-v2-state0,measured-settling-v2,0,8,48,48,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
 efficiency-v2-state0,measured-settling-v2,0,9,48,48,0,completed,"robot.look_at(x=0.01, y=-0.01, z=0.41, grid_z=0.41, zoom=2.0)"
 efficiency-v2-state0,measured-settling-v2,0,10,48,48,0,completed,"robot.look_at(x=-0.1, y=0.2, z=0.41, grid_z=0.41, zoom=2.0)"
-efficiency-v2-state0,measured-settling-v2,0,11,48,48,0,Response truncated; nothing executed. Return a shorter complete command.,
+efficiency-v2-state0,measured-settling-v2,0,11,48,48,0,Response truncated; nothing executed. Return a shorter complete command.,"The image shows a small orange/red box at 0.0,0.0? Actually the box is at 0.0,0.0? The grid shows 0.0,0.0 at bottom center. The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? Hmm.
+
+The image shows a small orange/red box at 0.0,0.0? Actually the box is at 0.0,0.0? The grid shows 0.0,0.0 at the bottom center. The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0.0,0.0? The box is at 0."
+wrist-v3-high-state0,wrist-targeting-v3,0,1,0,0,0,completed,"robot.look_at(x=0.26, y=0.02, z=0.41, grid_z=0.41, zoom=2.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,2,0,0,0,completed,"robot.look_at(x=0.35, y=0.05, z=0.41, grid_z=0.41, zoom=2.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,3,0,0,0,observation_limit,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,4,0,42,42,completed,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,5,42,42,0,IK_FAILURE,"robot.goto(x=0.4, y=0.2, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,6,42,86,44,completed,"robot.goto(x=0.25, y=0.15, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,7,86,149,63,completed,"robot.goto(x=0.0, y=0.0, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,8,149,211,62,completed,"robot.goto(x=-0.2, y=0.2, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,9,211,211,0,COLLISION,"robot.goto(x=0.4, y=0.4, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,10,211,211,0,COLLISION,"robot.goto(x=0.3, y=0.3, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,11,211,211,0,COLLISION,"robot.goto(x=0.2, y=0.1, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,12,211,211,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,13,211,211,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,14,211,211,0,IK_FAILURE,"robot.goto(x=-0.3, y=0.0, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,15,211,244,33,completed,"robot.goto(x=-0.1, y=0.1, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,16,244,244,0,IK_FAILURE,"robot.goto(x=0.35, y=0.15, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,17,244,313,69,completed,"robot.goto(x=0.2, y=0.2, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,18,313,313,0,IK_FAILURE,"robot.goto(x=0.4, y=0.1, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,19,313,313,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,20,313,313,0,completed,"robot.look_at(x=-0.1, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,21,313,313,0,COLLISION,"robot.goto(x=0.0, y=0.2, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,22,313,346,33,completed,"robot.goto(x=0.1, y=0.1, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,23,346,379,33,completed,"robot.goto(x=0.0, y=0.0, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,24,379,379,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,25,379,379,0,completed,"robot.look_at(x=-0.1, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,26,379,379,0,COLLISION,"robot.goto(x=0.0, y=0.2, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,27,379,379,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,28,379,379,0,completed,"robot.look_at(x=-0.1, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,29,379,411,32,completed,"robot.goto(x=0.1, y=0.1, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,30,411,411,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,31,411,411,0,completed,"robot.look_at(x=-0.1, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,32,411,436,25,completed,"robot.goto(x=0.2, y=0.1, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,33,436,436,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,34,436,436,0,completed,"robot.look_at(x=-0.1, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,35,436,436,0,IK_FAILURE,"robot.goto(x=0.3, y=0.1, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,36,436,436,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,37,436,436,0,completed,"robot.look_at(x=-0.1, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,38,436,469,33,completed,"robot.goto(x=0.1, y=0.0, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,39,469,469,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,40,469,469,0,completed,"robot.look_at(x=-0.1, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,41,469,502,33,completed,"robot.goto(x=0.2, y=0.1, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,42,502,502,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,43,502,502,0,completed,"robot.look_at(x=-0.1, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,44,502,536,34,completed,"robot.goto(x=0.3, y=0.0, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,45,536,536,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,46,536,536,0,completed,"robot.look_at(x=-0.1, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,47,536,580,44,blocked,"robot.goto(x=0.1, y=0.0, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,48,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,49,580,580,0,IK_FAILURE,"robot.goto(x=0.3, y=0.3, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,50,580,580,0,IK_FAILURE,"robot.goto(x=0.0, y=0.2, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,51,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,52,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,53,580,580,0,IK_FAILURE,"robot.goto(x=0.2, y=0.0, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,54,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,55,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,56,580,580,0,IK_FAILURE,"robot.goto(x=0.0, y=0.0, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,57,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,58,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,59,580,580,0,IK_FAILURE,"robot.goto(x=0.0, y=0.0, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,60,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,61,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,62,580,580,0,observation_limit,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,63,580,580,0,IK_FAILURE,"robot.goto(x=0.35, y=0.15, z=0.6, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,64,580,580,0,IK_FAILURE,"robot.goto(x=0.05, y=0.05, z=0.55, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,65,580,580,0,IK_FAILURE,"robot.goto(x=0.05, y=0.05, z=0.6, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,66,580,580,0,IK_FAILURE,robot.home()
+wrist-v3-high-state0,wrist-targeting-v3,0,67,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,68,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,69,580,580,0,IK_FAILURE,"robot.goto(x=0.05, y=0.05, z=0.7, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,70,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,71,580,580,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,72,580,580,0,observation_limit,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,73,580,580,0,IK_FAILURE,"robot.goto(x=0.05, y=0.05, z=0.7, pitch_deg=90, yaw_deg=0)"
+wrist-v3-high-state0,wrist-targeting-v3,0,74,580,580,0,IK_FAILURE,"robot.move_by(dz=0.15, speed=0.05)"
+wrist-v3-high-state0,wrist-targeting-v3,0,75,580,580,0,IK_FAILURE,"robot.move_by(dz=0.1, speed=0.05)"
+wrist-v3-high-state0,wrist-targeting-v3,0,76,580,580,0,IK_FAILURE,"robot.move_by(dz=0.1, speed=0.05)"
+wrist-v3-high-state0,wrist-targeting-v3,0,77,580,580,0,IK_FAILURE,"robot.move_by(dz=0.1, speed=0.05)"
+wrist-v3-high-state0,wrist-targeting-v3,0,78,580,580,0,IK_FAILURE,"robot.move_by(dz=0.1, speed=0.05)"
+wrist-v3-high-state0,wrist-targeting-v3,0,79,580,580,0,IK_FAILURE,"robot.move_by(dz=0.1, speed=0.05)"
+wrist-v3-high-state0,wrist-targeting-v3,0,80,580,580,0,IK_FAILURE,"robot.move_by(dz=0.1, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,1,0,0,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-control,wrist-targeting-v3,0,2,0,0,0,completed,"robot.look_at(x=0.25, y=0.15, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-control,wrist-targeting-v3,0,3,0,0,0,observation_limit,"robot.look_at(x=0.0, y=0.1, z=0.41, grid_z=0.41, zoom=1.0)"
+general-ablation-v1-control,wrist-targeting-v3,0,4,0,52,52,completed,"x, y, z = robot.deproject_depth(u=0.45, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,5,52,74,22,completed,"robot.goto(x=0.15, y=0.15, z=0.55, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,6,74,102,28,completed,"robot.goto(x=0.20, y=0.05, z=0.55, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,7,102,136,34,completed,"robot.goto(x=0.05, y=0.05, z=0.55, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,8,136,173,37,completed,"robot.goto(x=0.20, y=0.10, z=0.55, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,9,173,208,35,completed,"robot.goto(x=0.20, y=-0.05, z=0.55, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,10,208,236,28,completed,"robot.goto(x=0.30, y=0.00, z=0.55, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,11,236,236,0,COLLISION,"robot.goto(x=0.10, y=-0.10, z=0.55, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,12,236,252,16,completed,"robot.goto(x=0.3, y=0.0, z=0.6, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,13,252,252,0,IK_FAILURE,"robot.goto(x=0.10, y=0.10, z=0.55, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,14,252,252,0,IK_FAILURE,"robot.goto(x=0.25, y=0.10, z=0.60, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,15,252,252,0,IK_FAILURE,"robot.goto(x=0.15, y=0.05, z=0.60, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,16,252,252,0,IK_FAILURE,robot.home()
+general-ablation-v1-control,wrist-targeting-v3,0,17,252,252,0,IK_FAILURE,"robot.goto(x=0.3, y=0.0, z=0.7, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,18,252,252,0,IK_FAILURE,"robot.goto(x=0.3, y=0.0, z=0.8, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,19,252,252,0,IK_FAILURE,"robot.goto(x=0.3, y=0.0, z=0.9, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,20,252,252,0,IK_FAILURE,robot.home()
+general-ablation-v1-control,wrist-targeting-v3,0,21,252,297,45,completed,"robot.move_by(forward=0.0, left=0.0, dz=0.1, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,22,297,297,0,IK_FAILURE,"robot.goto(x=0.15, y=0.10, z=0.70, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,23,297,297,0,IK_FAILURE,"robot.goto(x=0.20, y=0.10, z=0.70, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,24,297,320,23,completed,"robot.move_by(forward=0.0, left=0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,25,320,320,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,26,320,343,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,27,343,343,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,28,343,366,23,completed,"robot.move_by(forward=0.0, left=0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,29,366,366,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,30,366,389,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,31,389,389,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,32,389,389,0,completed,"robot.look_at(x=0.0, y=0.1, z=0.41, grid_z=0.41, zoom=1.0)"
+general-ablation-v1-control,wrist-targeting-v3,0,33,389,389,0,IK_FAILURE,"robot.goto(x=0.10, y=0.10, z=0.70, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-control,wrist-targeting-v3,0,34,389,412,23,completed,"robot.move_by(forward=0.0, left=0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,35,412,412,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,36,412,435,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,37,435,435,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,38,435,458,23,completed,"robot.move_by(forward=0.0, left=0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,39,458,458,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,40,458,481,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,41,481,481,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,42,481,504,23,completed,"robot.move_by(forward=0.0, left=0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,43,504,504,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,44,504,504,0,IK_FAILURE,"robot.move_by(forward=0.0, left=0.0, dz=0.1, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,45,504,527,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,46,527,527,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,47,527,550,23,completed,"robot.move_by(forward=0.0, left=0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,48,550,550,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,49,550,573,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,50,573,573,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,51,573,596,23,completed,"robot.move_by(forward=0.0, left=0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,52,596,596,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,53,596,619,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,54,619,619,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,55,619,642,23,completed,"robot.move_by(forward=0.0, left=0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,56,642,642,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,57,642,665,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,58,665,665,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,59,665,665,0,completed,"robot.look_at(x=0.05, y=0.02, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-control,wrist-targeting-v3,0,60,665,688,23,completed,"robot.move_by(forward=0.0, left=0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,61,688,688,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,62,688,711,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,63,711,711,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,64,711,734,23,completed,"robot.move_by(forward=0.0, left=0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,65,734,734,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,66,734,757,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,67,757,757,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,68,757,780,23,completed,"robot.move_by(forward=0.0, left=0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,69,780,780,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,70,780,803,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,71,803,803,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,72,803,826,23,completed,"robot.move_by(forward=0.0, left=0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,73,826,826,0,IK_FAILURE,"robot.move_by(forward=0.05, left=0.0, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,74,826,826,0,IK_FAILURE,robot.home()
+general-ablation-v1-control,wrist-targeting-v3,0,75,826,849,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,76,849,849,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+general-ablation-v1-control,wrist-targeting-v3,0,77,849,849,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-control,wrist-targeting-v3,0,78,849,872,23,completed,"robot.move_by(forward=0.0, left=-0.05, dz=0.0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-control,wrist-targeting-v3,0,79,872,872,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-control,wrist-targeting-v3,0,80,872,872,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,1,0,0,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,2,0,0,0,completed,"robot.look_at(x=0.25, y=0.15, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,3,0,0,0,observation_limit,"robot.look_at(x=-0.15, y=0.15, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,4,0,53,53,completed,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,5,53,53,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,6,53,53,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,7,53,102,49,completed,"x, y, z = robot.deproject_depth(u=0.3, v=0.6, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,8,102,102,0,completed,"robot.look_at(x=0.3, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,9,102,102,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,10,102,102,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,11,102,111,9,completed,"robot.goto(x=0.06, y=-0.06, z=0.58, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,12,111,111,0,completed,"robot.look_at(x=0.3, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,13,111,111,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,14,111,111,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,15,111,120,9,completed,"robot.goto(x=0.06, y=-0.06, z=0.60, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,16,120,120,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,17,120,129,9,completed,"robot.goto(x=0.06, y=-0.06, z=0.62, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,18,129,129,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,19,129,138,9,completed,"robot.goto(x=0.06, y=-0.06, z=0.64, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,20,138,138,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,21,138,147,9,completed,"robot.goto(x=0.06, y=-0.06, z=0.66, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,22,147,147,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,23,147,156,9,completed,"robot.goto(x=0.06, y=-0.06, z=0.68, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,24,156,156,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,25,156,165,9,completed,"robot.goto(x=0.06, y=-0.06, z=0.70, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,26,165,165,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,27,165,174,9,completed,"robot.goto(x=0.06, y=-0.06, z=0.72, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,28,174,174,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,29,174,174,0,repeat_rejected,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,30,174,183,9,completed,"robot.goto(x=0.06, y=-0.06, z=0.74, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,31,183,183,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,32,183,183,0,repeat_rejected,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,33,183,192,9,completed,"robot.goto(x=0.06, y=-0.06, z=0.76, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,34,192,192,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,35,192,192,0,repeat_rejected,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,36,192,201,9,completed,"robot.goto(x=0.06, y=-0.06, z=0.78, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,37,201,201,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,38,201,201,0,repeat_rejected,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,39,201,201,0,completed,"robot.look_at(x=0.0, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,40,201,201,0,completed,"robot.look_at(x=-0.15, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,41,201,201,0,observation_limit,"robot.look_at(x=-0.25, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,42,201,271,70,completed,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,43,271,271,0,completed,"robot.look_at(x=-0.15, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,44,271,271,0,completed,"robot.look_at(x=-0.25, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,45,271,271,0,observation_limit,"robot.look_at(x=-0.35, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,46,271,292,21,completed,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,47,292,292,0,completed,"robot.look_at(x=-0.15, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,48,292,292,0,completed,"robot.look_at(x=-0.25, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,49,292,292,0,observation_limit,"robot.look_at(x=-0.35, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,50,292,292,0,completed,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,51,292,292,0,completed,"robot.look_at(x=-0.15, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,52,292,292,0,completed,"robot.look_at(x=-0.25, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,53,292,292,0,observation_limit,"robot.look_at(x=-0.35, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,54,292,292,0,completed,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,55,292,292,0,completed,"robot.look_at(x=-0.15, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,56,292,292,0,completed,"robot.look_at(x=-0.25, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,57,292,292,0,observation_limit,"robot.look_at(x=-0.35, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,58,292,292,0,completed,"x, y, z = robot.deproject_depth(u=0.5, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,59,292,292,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,60,292,292,0,completed,"robot.look_at(x=-0.15, y=0.1, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,61,292,314,22,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,62,314,314,0,COLLISION,"x, y = robot.deproject(u=0.5, v=0.3, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=-90)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,63,314,314,0,IK_FAILURE,"x, y = robot.deproject(u=0.5, v=0.3, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=-90, approach_height=0.1)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,64,314,324,10,IK_FAILURE,"robot.goto(x=-0.10, y=0.04, z=0.58, pitch_deg=90, yaw_deg=0)
+x, y = robot.deproject(u=0.5, v=0.3, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=-90, approach_height=0.1)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,65,324,331,7,IK_FAILURE,"robot.goto(x=-0.09, y=0.04, z=0.58, pitch_deg=90, yaw_deg=0)
+x, y = robot.deproject(u=0.5, v=0.3, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=-90, approach_height=0.1)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,66,331,420,89,grasp_failed,"robot.goto(x=-0.09, y=0.04, z=0.58, pitch_deg=90, yaw_deg=0)
+x, y = robot.deproject(u=0.5, v=0.3, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, approach_height=0.1)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,67,420,523,103,COLLISION,"robot.open_gripper()
+robot.goto(x=-0.09, y=0.04, z=0.58, pitch_deg=90, yaw_deg=0)
+x, y = robot.deproject(u=0.5, v=0.3, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, approach_height=0.1)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,68,523,638,115,COLLISION,"robot.goto(x=-0.09, y=0.05, z=0.58, pitch_deg=90, yaw_deg=0)
+x, y = robot.deproject(u=0.5, v=0.3, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, approach_height=0.1)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,69,638,854,216,grasp_failed,"robot.goto(x=-0.08, y=0.05, z=0.58, pitch_deg=90, yaw_deg=0)
+x, y = robot.deproject(u=0.5, v=0.3, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, approach_height=0.1)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,70,854,872,18,COLLISION,"robot.open_gripper()
+robot.goto(x=-0.08, y=0.05, z=0.58, pitch_deg=90, yaw_deg=0)
+x, y = robot.deproject(u=0.5, v=0.3, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, approach_height=0.1)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,71,872,872,0,COLLISION,"robot.goto(x=0.30, y=0.00, z=0.60, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-recovery,wrist-targeting-v3,0,72,872,872,0,COLLISION,robot.home()
+general-ablation-v1-recovery,wrist-targeting-v3,0,73,872,900,28,completed,"robot.move_by(dz=0.2, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,1,0,0,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,2,0,37,37,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,3,37,37,0,COLLISION,"x, y = robot.deproject(u=0.55, v=0.45, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.05, speed=0.10)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,4,37,46,9,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.15, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,5,46,71,25,COLLISION,"x, y = robot.deproject(u=0.5, v=0.45, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,6,71,83,12,completed,"robot.move_by(left=0.02, forward=0, dz=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,7,83,100,17,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,8,100,115,15,completed,"robot.move_by(left=0.03, forward=0, dz=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,9,115,132,17,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,10,132,152,20,completed,"robot.move_by(left=0.04, forward=0, dz=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,11,152,169,17,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,12,169,193,24,completed,"robot.move_by(left=0.05, forward=0, dz=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,13,193,210,17,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,14,210,237,27,completed,"robot.move_by(left=0.06, forward=0, dz=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,15,237,254,17,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,16,254,286,32,completed,"robot.move_by(left=0.07, forward=0, dz=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,17,286,303,17,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,18,303,338,35,completed,"robot.move_by(left=0.08, forward=0, dz=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,19,338,355,17,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,20,355,394,39,completed,"robot.move_by(left=0.09, forward=0, dz=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,21,394,411,17,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,22,411,428,17,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,23,428,445,17,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,24,445,445,0,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,25,445,445,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,26,445,445,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,27,445,528,83,completed,"robot.move_by(forward=0, left=0, dz=0.2, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,28,528,528,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,29,528,528,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,30,528,528,0,observation_limit,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,31,528,611,83,completed,"robot.move_by(dz=-0.2, forward=0, left=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,32,611,611,0,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.455, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0, pitch_deg=90, approach_height=0.07, speed=0.08)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,33,611,611,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,34,611,697,86,completed,"robot.move_by(dz=0.2, forward=0.05, left=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,35,697,697,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.45, v=0.45, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,36,697,697,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.42, v=0.42, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.15, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,37,697,697,0,COLLISION,"robot.move_by(dz=-0.25, forward=0, left=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,38,697,827,130,completed,"robot.move_by(dz=0.3, forward=0, left=0.1, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,39,827,827,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.45, v=0.45, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.15, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,40,827,827,0,COLLISION,"robot.move_by(dz=-0.5, forward=0, left=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-clean-images,wrist-targeting-v3,0,41,827,900,73,completed,"robot.move_by(dz=-0.3, forward=0, left=0, dyaw_deg=0, dpitch_deg=0, droll_deg=0, speed=0.05)"
+general-ablation-v1-combined,wrist-targeting-v3,0,1,0,0,0,completed,"robot.look_at(x=0.0, y=0.05, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,2,0,36,36,completed,"x, y, z = robot.deproject_depth(u=0.25, v=0.35, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,3,36,36,0,completed,"robot.look_at(x=0.0, y=0.1, z=0.41, grid_z=0.41, zoom=1.5)"
+general-ablation-v1-combined,wrist-targeting-v3,0,4,36,76,40,completed,"x, y, z = robot.deproject_depth(u=0.5, v=0.35, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,5,76,76,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.2)"
+general-ablation-v1-combined,wrist-targeting-v3,0,6,76,124,48,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,7,124,124,0,completed,"robot.look_at(x=-0.1, y=0.0, z=0.41, grid_z=0.41, zoom=1.5)"
+general-ablation-v1-combined,wrist-targeting-v3,0,8,124,138,14,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.45, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,9,138,138,0,completed,"robot.look_at(x=-0.05, y=0.0, z=0.41, grid_z=0.41, zoom=1.3)"
+general-ablation-v1-combined,wrist-targeting-v3,0,10,138,157,19,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,11,157,157,0,completed,"robot.look_at(x=-0.05, y=0.0, z=0.41, grid_z=0.41, zoom=1.1)"
+general-ablation-v1-combined,wrist-targeting-v3,0,12,157,192,35,completed,"x, y, z = robot.deproject_depth(u=0.32, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,13,192,192,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.5)"
+general-ablation-v1-combined,wrist-targeting-v3,0,14,192,201,9,completed,"x, y, z = robot.deproject_depth(u=0.25, v=0.45, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,15,201,201,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,16,201,249,48,completed,"x, y, z = robot.deproject_depth(u=0.65, v=0.35, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,17,249,249,0,completed,"robot.look_at(x=0.3, y=0.1, z=0.41, grid_z=0.41, zoom=1.5)"
+general-ablation-v1-combined,wrist-targeting-v3,0,18,249,317,68,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,19,317,335,18,completed,robot.open_gripper()
+general-ablation-v1-combined,wrist-targeting-v3,0,20,335,398,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,21,398,416,18,completed,robot.open_gripper()
+general-ablation-v1-combined,wrist-targeting-v3,0,22,416,479,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,23,479,497,18,completed,robot.open_gripper()
+general-ablation-v1-combined,wrist-targeting-v3,0,24,497,560,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,25,560,578,18,completed,robot.open_gripper()
+general-ablation-v1-combined,wrist-targeting-v3,0,26,578,641,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,27,641,659,18,completed,robot.open_gripper()
+general-ablation-v1-combined,wrist-targeting-v3,0,28,659,722,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,29,722,740,18,completed,robot.open_gripper()
+general-ablation-v1-combined,wrist-targeting-v3,0,30,740,803,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,31,803,821,18,completed,robot.open_gripper()
+general-ablation-v1-combined,wrist-targeting-v3,0,32,821,894,73,grasp_failed,"x, y, z = robot.deproject_depth(u=0.5, v=0.3, camera=""wrist"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+general-ablation-v1-combined,wrist-targeting-v3,0,33,894,894,0,completed,robot.done()
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,1,0,0,0,completed,"robot.look_at(x=0.0, y=0.05, z=0.41, grid_z=0.41, zoom=2.0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,2,0,36,36,completed,"x, y, z = robot.deproject_depth(u=0.25, v=0.35, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,3,36,36,0,completed,"robot.look_at(x=0.0, y=0.1, z=0.41, grid_z=0.41, zoom=1.5)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,4,36,76,40,completed,"x, y, z = robot.deproject_depth(u=0.5, v=0.35, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,5,76,76,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.2)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,6,76,124,48,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,7,124,124,0,completed,"robot.look_at(x=-0.1, y=0.0, z=0.41, grid_z=0.41, zoom=1.5)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,8,124,138,14,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.45, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,9,138,138,0,completed,"robot.look_at(x=-0.05, y=0.0, z=0.41, grid_z=0.41, zoom=1.3)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,10,138,157,19,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,11,157,157,0,completed,"robot.look_at(x=-0.05, y=0.0, z=0.41, grid_z=0.41, zoom=1.1)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,12,157,192,35,completed,"x, y, z = robot.deproject_depth(u=0.32, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,13,192,192,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.5)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,14,192,201,9,completed,"x, y, z = robot.deproject_depth(u=0.25, v=0.45, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,15,201,201,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,16,201,249,48,completed,"x, y, z = robot.deproject_depth(u=0.65, v=0.35, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,17,249,249,0,completed,"robot.look_at(x=0.3, y=0.1, z=0.41, grid_z=0.41, zoom=1.5)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,18,249,317,68,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,19,317,335,18,completed,robot.open_gripper()
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,20,335,398,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,21,398,416,18,completed,robot.open_gripper()
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,22,416,479,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,23,479,497,18,completed,robot.open_gripper()

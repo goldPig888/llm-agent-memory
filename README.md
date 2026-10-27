@@ -4,6 +4,8 @@ For the experiment configurations, implementation map, saved results summary,
 and known limitations, start with [the experiment review guide](docs/EXPERIMENTS.md).
 The [wrist-targeting and pointing-test notes](docs/WRIST_TARGETING.md) describe
 the v3 changes and how to evaluate recognition separately from robot control.
+For the latest completed and in-progress results, read [the results snapshot](docs/LATEST_RESULTS.md)
+and [the general harness ablation configurations](docs/HARNESS_ABLATIONS.md).
 
 Evaluate Meta Muse Glimmer with RGB observations and structured robot tool calls.
 Inference runs on this machine; no Codex sessions or hosted inference credentials.

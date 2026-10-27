@@ -13,6 +13,7 @@ from .backend import HarnessEmbodiment
 from .geometry import annotate, project, deproject
 from .plan_program import parse_plan
 from .upstream import SIGNATURES, orientation
+from .experiments import tone_image
 
 
 def panda_orientation(yaw, pitch=90., azimuth=0., roll=0.):
@@ -24,7 +25,8 @@ def panda_orientation(yaw, pitch=90., azimuth=0., roll=0.):
 class Session:
     execution_profile = 'measured-settling-v2'
     def __init__(self, folder, max_steps=900, compact_observations=False,
-                 max_look_only=2, efficient_contact=False):
+                 max_look_only=2, efficient_contact=False, clean_images=False,
+                 image_tone='identity'):
         self.folder = Path(folder)
         self.robot = HarnessEmbodiment(task_id=0, output_dir=self.folder)
         self.max_steps = max_steps
@@ -38,6 +40,8 @@ class Session:
         self.holding = False
         self.feedback = 'Ready'
         self.motion_log = []
+        self.clean_images=clean_images
+        self.image_tone=image_tone
         self.compact_observations=compact_observations
         self.max_look_only=max_look_only
         self.look_only_count=0
@@ -97,8 +101,12 @@ class Session:
         images = []
         for name, key in [('agentview','agentview_image'),('robot0_eye_in_hand','robot0_eye_in_hand_image')]:
             crop = self.crop if name == 'agentview' else (0,0,512,512)
-            image = annotate(d['images'][key], d['cameras'][name], d['eef_state'], self.grid_z, crop,
-                             jaw_gap=float(np.abs(d['gripper_qpos']).sum()))
+            if self.clean_images:
+                image=Image.fromarray(np.asarray(d['images'][key],dtype=np.uint8)).crop(crop).resize((512,512))
+                image=tone_image(image,getattr(self,'image_tone','identity'))
+            else:
+                image = annotate(d['images'][key], d['cameras'][name], d['eef_state'], self.grid_z, crop,
+                                 jaw_gap=float(np.abs(d['gripper_qpos']).sum()))
             out = self.folder / 'observations'; out.mkdir(exist_ok=True)
             image.save(out / f'call{call:02d}_{name}.png')
             buf=io.BytesIO(); image.save(buf,format='PNG'); images.append(buf.getvalue())

@@ -1,0 +1,245 @@
+{
+  "captured_utc": "2026-10-27T17:09:20.751164+00:00",
+  "snapshot_only": true,
+  "note": "Running/queued rows are partial, not completed failures. These are single-state screens.",
+  "campaigns": [
+    {
+      "name": "general-ablation-v1",
+      "status": "completed",
+      "protocol": {
+        "task_id": 0,
+        "initial_state": 0,
+        "effort": "high",
+        "profile": "wrist-v3",
+        "max_calls": 80,
+        "max_steps": 900,
+        "max_output_tokens": 16384,
+        "generation_seed": 42,
+        "variants": [
+          "control",
+          "recovery",
+          "clean-images",
+          "combined"
+        ],
+        "switches": {
+          "control": {
+            "recovery": false,
+            "clean_images": false
+          },
+          "recovery": {
+            "recovery": true,
+            "clean_images": false
+          },
+          "clean-images": {
+            "recovery": false,
+            "clean_images": true
+          },
+          "combined": {
+            "recovery": true,
+            "clean_images": true
+          }
+        },
+        "generalizable": true,
+        "task_specific_prompts": false,
+        "paid_api": false,
+        "interpretation": "One state per variant is a diagnostic screen, not a success-rate estimate."
+      },
+      "trials": [
+        {
+          "variant": "control",
+          "status": "completed",
+          "directory": "task00_high_20261026-180205",
+          "metrics": {
+            "decisions": 80,
+            "steps": 872,
+            "statuses": {
+              "completed": 42,
+              "observation_limit": 1,
+              "COLLISION": 1,
+              "IK_FAILURE": 36
+            },
+            "first_grasp_proposed_call": null,
+            "first_grasp_primitive_completed_call": null,
+            "longest_decision_streak_without_physics": 8,
+            "environment_success": false
+          },
+          "results": [
+            {
+              "episode": 0,
+              "init_state": 0,
+              "status": "failure",
+              "environment_success": false,
+              "steps": 872,
+              "api_attempts": 80,
+              "stop_detail": null
+            }
+          ]
+        },
+        {
+          "variant": "recovery",
+          "status": "completed",
+          "directory": "task00_high_20261026-183716",
+          "metrics": {
+            "decisions": 73,
+            "steps": 900,
+            "statuses": {
+              "completed": 40,
+              "observation_limit": 6,
+              "IK_FAILURE": 15,
+              "repeat_rejected": 4,
+              "COLLISION": 6,
+              "grasp_failed": 2
+            },
+            "first_grasp_proposed_call": 62,
+            "first_grasp_primitive_completed_call": null,
+            "longest_decision_streak_without_physics": 14,
+            "environment_success": false
+          },
+          "results": [
+            {
+              "episode": 0,
+              "init_state": 0,
+              "status": "failure",
+              "environment_success": false,
+              "steps": 900,
+              "api_attempts": 73,
+              "stop_detail": null
+            }
+          ]
+        },
+        {
+          "variant": "clean-images",
+          "status": "completed",
+          "directory": "task00_high_20261026-191107",
+          "metrics": {
+            "decisions": 41,
+            "steps": 900,
+            "statuses": {
+              "completed": 21,
+              "COLLISION": 16,
+              "observation_limit": 1,
+              "IK_FAILURE": 3
+            },
+            "first_grasp_proposed_call": 3,
+            "first_grasp_primitive_completed_call": null,
+            "longest_decision_streak_without_physics": 3,
+            "environment_success": false
+          },
+          "results": [
+            {
+              "episode": 0,
+              "init_state": 0,
+              "status": "failure",
+              "environment_success": false,
+              "steps": 900,
+              "api_attempts": 41,
+              "stop_detail": null
+            }
+          ]
+        },
+        {
+          "variant": "combined",
+          "status": "completed",
+          "directory": "task00_high_20261026-193637",
+          "metrics": {
+            "decisions": 33,
+            "steps": 894,
+            "statuses": {
+              "completed": 25,
+              "dropped": 7,
+              "grasp_failed": 1
+            },
+            "first_grasp_proposed_call": 18,
+            "first_grasp_primitive_completed_call": null,
+            "longest_decision_streak_without_physics": 1,
+            "environment_success": false
+          },
+          "results": [
+            {
+              "episode": 0,
+              "init_state": 0,
+              "status": "failure",
+              "environment_success": false,
+              "steps": 894,
+              "api_attempts": 33,
+              "stop_detail": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "visual-ablation-v1",
+      "status": "running",
+      "protocol": {
+        "task_id": 0,
+        "initial_state": 0,
+        "effort": "high",
+        "profile": "wrist-v3",
+        "max_calls": 80,
+        "max_steps": 900,
+        "max_output_tokens": 16384,
+        "generation_seed": 42,
+        "variants": [
+          "clean-images",
+          "clean-bright",
+          "clean-contrast"
+        ],
+        "switches": {
+          "clean-images": {
+            "recovery": false,
+            "clean_images": true
+          },
+          "clean-bright": {
+            "recovery": false,
+            "clean_images": true,
+            "image_tone": "gamma-0.8"
+          },
+          "clean-contrast": {
+            "recovery": false,
+            "clean_images": true,
+            "image_tone": "autocontrast-1pct"
+          }
+        },
+        "generalizable": true,
+        "task_specific_prompts": false,
+        "paid_api": false,
+        "interpretation": "One state per variant is a diagnostic screen, not a success-rate estimate."
+      },
+      "trials": [
+        {
+          "variant": "clean-images",
+          "status": "running",
+          "directory": "task00_high_20261027-115447",
+          "metrics": {
+            "decisions": 23,
+            "steps": 497,
+            "statuses": {
+              "completed": 20,
+              "dropped": 3
+            },
+            "first_grasp_proposed_call": 18,
+            "first_grasp_primitive_completed_call": null,
+            "longest_decision_streak_without_physics": 1,
+            "environment_success": false
+          },
+          "results": []
+        },
+        {
+          "variant": "clean-bright",
+          "status": "queued",
+          "directory": null,
+          "metrics": {},
+          "results": []
+        },
+        {
+          "variant": "clean-contrast",
+          "status": "queued",
+          "directory": null,
+          "metrics": {},
+          "results": []
+        }
+      ]
+    }
+  ]
+}
