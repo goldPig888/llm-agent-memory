@@ -6,6 +6,8 @@ The [wrist-targeting and pointing-test notes](docs/WRIST_TARGETING.md) describe
 the v3 changes and how to evaluate recognition separately from robot control.
 For the latest completed and in-progress results, read [the results snapshot](docs/LATEST_RESULTS.md)
 and [the general harness ablation configurations](docs/HARNESS_ABLATIONS.md).
+The [native-format pointing pilot](docs/NATIVE_POINTING.md) compares box-center
+and normalized-point localization at xhigh; its snapshot distinguishes queued work from results.
 
 Evaluate Meta Muse Glimmer with RGB observations and structured robot tool calls.
 Inference runs on this machine; no Codex sessions or hosted inference credentials.

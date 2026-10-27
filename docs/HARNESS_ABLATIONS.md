@@ -36,7 +36,7 @@ states/tasks before adopting it. No paid API is used.
 ```bash
 python scripts/queue_harness_ablations.py \
   --output /metadisk/may/muse-glimmer/harness_xhigh_results \
-  --campaign-id general-ablation-v1
+  --campaign-id general-ablation-v1 --effort high
 ```
 
 The queue runs sequentially and each child holds the existing global model and
@@ -66,7 +66,7 @@ scene-specific tuning, or task-specific prompt is used.
 ```bash
 python scripts/queue_harness_ablations.py \
   --output /metadisk/may/muse-glimmer/harness_xhigh_results \
-  --campaign-id visual-ablation-v1 \
+  --campaign-id visual-ablation-v1 --effort high \
   --variants clean-images clean-bright clean-contrast
 ```
 
@@ -76,3 +76,52 @@ sequentially and appear in the existing comparison viewer. The crop does not
 cause the initially clipped basket; the raw fixed-camera frame is already
 clipped there. A full-frame toggle would be a no-op at the initial state, so it
 is not part of this experiment.
+
+## DeepSeek max-effort comparison
+
+The Haimaker route requests `deepseek/deepseek-v4.1-flash`, thinking enabled,
+`reasoning_effort=max`. This is the highest documented native level (ultra maps
+to max in DeepSeek docs). The API's internal effort is not independently
+observable; exact requests/responses are retained. No local template kwargs or
+unsupported sampling seed are sent. Authentication is never included in captures.
+
+`queue_deepseek_harness.py` waits for all three visual trials to finish, then
+runs Task 0 states 0,1,2 sequentially with clean RGB, the existing general
+prompt, 80 calls/900 physics steps per episode, and a 16,384-token output cap.
+The prompt substitutes only the model identity. There is no task-specific
+solution prompt, demonstration, or cross-episode memory.
+
+All three episodes share a $5 peak-list-price accounting cap (not a promotional
+invoice). Each request reserves full-context input plus maximum output at
+$0.30/M input and $1.20/M output; known usage reconciles that reservation.
+Unknown usage retains its reservation and stops the run; errors are not retried.
+An insufficient cap can stop the batch before all three episodes complete.
+The model's advertised context is 1M; we conservatively reserve 1,048,576 input
+tokens. This accounting ignores cache discounts rather than assuming free use.
+
+```bash
+python scripts/queue_deepseek_harness.py \
+  --output /metadisk/may/muse-glimmer/harness_xhigh_results \
+  --env-file /path/to/your/.env
+```
+
+The existing harness viewer records model, provider, requested effort, raw
+commands, feedback, tokens, estimated cost, and task outcome for these trials.
+Credentials and raw outputs remain local. No manipulation result is implied by
+passing provider-transport unit tests.
+
+## Xhigh visual rerun
+
+The initial visual experiments used high effort. The requested rerun is
+`visual-ablation-xhigh-v1`, with the same three variants on Task 0/state 0,
+80 decisions, 900 steps, 16,384 output tokens, and generation seed 42 + decision
+number. Only reasoning effort changes to xhigh. Older high results are retained.
+The local harness runner and ablation queue now default to xhigh; older high
+experiment reproduction commands above explicitly specify --effort high.
+
+```bash
+python scripts/queue_harness_ablations.py \
+  --output /metadisk/may/muse-glimmer/harness_xhigh_results \
+  --campaign-id visual-ablation-xhigh-v1 --effort xhigh \
+  --variants clean-images clean-bright clean-contrast
+```

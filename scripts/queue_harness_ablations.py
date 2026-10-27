@@ -48,6 +48,7 @@ def main():
     p.add_argument('--campaign-id',required=True)
     p.add_argument('--variants',nargs='+',choices=list(VARIANTS),
                    default=['control','recovery','clean-images','combined'])
+    p.add_argument('--effort',choices=['low','medium','high','xhigh'],default='xhigh')
     p.add_argument('--max-calls',type=int,default=80)
     p.add_argument('--max-steps',type=int,default=900)
     p.add_argument('--generation-seed',type=int,default=42)
@@ -60,7 +61,7 @@ def main():
     lock=(root/'.ablation_queue.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     statepath=root/(args.campaign_id+'.json')
     project=Path(__file__).resolve().parents[1]
-    protocol=dict(task_id=0,initial_state=0,effort='high',profile='wrist-v3',
+    protocol=dict(task_id=0,initial_state=0,effort=args.effort,profile='wrist-v3',
         max_calls=args.max_calls,max_steps=args.max_steps,max_output_tokens=16384,
         generation_seed=args.generation_seed,variants=args.variants,
         switches={k:VARIANTS[k] for k in args.variants},
@@ -85,7 +86,7 @@ def main():
             state['trials'].append(trial);atomic(statepath,state)
             command=[sys.executable,'-u',str(project/'scripts/run_harness.py'),
                 '--output',str(root),'--append','--trial-label',label,
-                '--variant',variant,'--inits','0','--effort','high','--profile','wrist-v3',
+                '--variant',variant,'--inits','0','--effort',args.effort,'--profile','wrist-v3',
                 '--max-calls',str(args.max_calls),'--max-steps',str(args.max_steps),
                 '--max-output-tokens','16384','--generation-seed',str(args.generation_seed)]
             print('Starting '+label,flush=True)

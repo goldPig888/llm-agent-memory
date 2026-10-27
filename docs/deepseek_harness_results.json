@@ -1,0 +1,99 @@
+{
+  "captured_utc": "2026-10-27T22:28:26.571816+00:00",
+  "snapshot_only": true,
+  "trials": [
+    {
+      "trial": "deepseek-max-clean-states012",
+      "status": "completed",
+      "model": "deepseek/deepseek-v4.1-flash",
+      "requested_effort": "max",
+      "variant": "clean-images",
+      "max_calls": 80,
+      "max_steps": 900,
+      "max_output_tokens": 16384,
+      "results": [
+        {
+          "episode": 0,
+          "init_state": 0,
+          "status": "failure",
+          "environment_success": false,
+          "steps": 900,
+          "api_attempts": 23,
+          "stop_detail": null
+        },
+        {
+          "episode": 1,
+          "init_state": 1,
+          "status": "failure",
+          "environment_success": false,
+          "steps": 900,
+          "api_attempts": 31,
+          "stop_detail": null
+        },
+        {
+          "episode": 2,
+          "init_state": 2,
+          "status": "failure",
+          "environment_success": false,
+          "steps": 900,
+          "api_attempts": 28,
+          "stop_detail": null
+        }
+      ],
+      "milestones": [
+        {
+          "state": 0,
+          "executed_primitives": {
+            "goto": 10,
+            "look_at": 2,
+            "grasp": 1,
+            "open_gripper": 1
+          },
+          "first_grasp_proposed_call": 4,
+          "completed_grasp_calls": [
+            10
+          ],
+          "completed_place_calls": []
+        },
+        {
+          "state": 1,
+          "executed_primitives": {
+            "goto": 15,
+            "look_at": 3,
+            "grasp": 1,
+            "open_gripper": 1,
+            "move_by": 2
+          },
+          "first_grasp_proposed_call": 2,
+          "completed_grasp_calls": [
+            6
+          ],
+          "completed_place_calls": []
+        },
+        {
+          "state": 2,
+          "executed_primitives": {
+            "goto": 14,
+            "look_at": 5,
+            "move_by": 3,
+            "grasp": 1,
+            "place": 1
+          },
+          "first_grasp_proposed_call": 4,
+          "completed_grasp_calls": [
+            16
+          ],
+          "completed_place_calls": [
+            27
+          ]
+        }
+      ],
+      "budget": {
+        "cap_usd": 5.0,
+        "charged_upper_bound_usd": 0.5400858000000003,
+        "pricing": "Peak list-price upper bound; not a promotional invoice."
+      }
+    }
+  ],
+  "note": "Completed primitives do not prove correct-object retention or placement. Costs are list-price bounds."
+}

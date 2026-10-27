@@ -1,4 +1,4 @@
-"""Open Gemini harness adapted to one Panda in LIBERO; separate from paper baseline."""
+"""Open Gemini harness on one Panda in LIBERO, using local Glimmer or Haimaker DeepSeek."""
 import argparse
 import base64
 import fcntl
@@ -13,6 +13,8 @@ from inspect_robots_libero.tasks import libero_10_task, LIBERO_10_TASKS
 from llm_agent_memory.harness.session import Session
 from llm_agent_memory.harness.upstream import SYSTEM_PROMPT, extract_curl
 from run_local import Capture, local_url
+from inspect_robots._dotenv import read_dotenv
+from llm_agent_memory.harness.haimaker import BatchBudget,HaimakerCapture,ProviderStop,MODEL as DEEPSEEK_MODEL
 from llm_agent_memory.harness.experiments import VARIANTS, RecoveryMonitor, image_instructions
 
 
@@ -85,7 +87,10 @@ def main():
     parser.add_argument('--append',action='store_true',help='Preserve earlier trials and append a new run')
     parser.add_argument('--trial-label',default='')
     parser.add_argument('--inits',type=int,nargs='+',default=list(range(10)),choices=range(50))
-    parser.add_argument('--effort',choices=['low','medium','high','xhigh'],default='high')
+    parser.add_argument('--effort',choices=['low','medium','high','xhigh','max'],default='xhigh')
+    parser.add_argument('--provider',choices=['local','haimaker'],default='local')
+    parser.add_argument('--env-file',type=Path)
+    parser.add_argument('--api-budget',type=float,default=5.)
     parser.add_argument('--profile',choices=['legacy','wrist-v3'],default='wrist-v3')
     parser.add_argument('--variant',choices=list(VARIANTS),default='control')
     parser.add_argument('--generation-seed',type=int,default=None)
@@ -95,6 +100,17 @@ def main():
     parser.add_argument('--base-url',type=local_url,default='http://127.0.0.1:8081/v1')
     args=parser.parse_args()
     if min(args.max_calls,args.max_steps,args.max_output_tokens)<1: parser.error('limits must be positive')
+    remote=args.provider=='haimaker'
+    if remote and args.effort!='max': parser.error('DeepSeek trial requires --effort max')
+    if not remote and args.effort=='max': parser.error('Local Glimmer highest setting is xhigh')
+    if remote and not 0<args.api_budget<=5: parser.error('API batch budget must be >0 and <=5 USD')
+    if remote and args.generation_seed is not None: parser.error('No generation seed supported for API trial')
+    if remote:
+        settings={**(read_dotenv(args.env_file) if args.env_file else {}),**os.environ}
+        key=settings.get('HAIMAKER_API_KEY')
+        if not key:parser.error('HAIMAKER_API_KEY is required')
+    model=DEEPSEEK_MODEL if remote else 'muse-glimmer'
+    base_url='https://api.haimaker.ai/v1' if remote else args.base_url
     variant=VARIANTS[args.variant]
     root=args.output.resolve(); root.mkdir(parents=True,exist_ok=True)
     trial_lock=(root/'.trial.lock').open('a')
@@ -117,16 +133,23 @@ def main():
         fcntl.flock(model_lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     except BlockingIOError:
         parser.error('Another baseline or pointing experiment is using the model')
-    with httpx.Client(trust_env=False,timeout=30) as client:
-        client.get(args.base_url+'/models').raise_for_status()
-        response=client.get(args.base_url.removesuffix('/v1')+'/props')
-        response.raise_for_status()
-        server=response.json()
-    directory='task00_'+args.effort+'_'+time.strftime('%Y%m%d-%H%M%S')
+    server={}
+    if not remote:
+        with httpx.Client(trust_env=False,timeout=30) as client:
+            client.get(base_url+'/models').raise_for_status()
+            response=client.get(base_url.removesuffix('/v1')+'/props')
+            response.raise_for_status()
+            server=response.json()
+    directory=('deepseek_task00_' if remote else 'task00_')+args.effort+'_'+time.strftime('%Y%m%d-%H%M%S')
     folder=root/directory; folder.mkdir()
     system=image_instructions(prompt(args.profile),variant['clean_images']).replace('80 model decisions and 900 simulator steps',
                            f'{args.max_calls} model decisions and {args.max_steps} simulator steps')
-    protocol=dict(model='muse-glimmer',wire='chat',reasoning_effort=args.effort,task_id=0,
+    if remote: system=system.replace('Muse Glimmer','DeepSeek V4.1-Flash')
+    budget=BatchBudget(args.api_budget,folder/'api_budget.json') if remote else None
+    protocol=dict(model=model,provider=args.provider,
+        api_budget_usd=args.api_budget if remote else None,
+        requested_reasoning_effort=args.effort,
+        reasoning_effort_verification='Requested max; provider internal effort is not independently observable' if remote else 'Local chat template',wire='chat',reasoning_effort=args.effort,task_id=0,
         task_name=LIBERO_10_TASKS[0][0],instruction=LIBERO_10_TASKS[0][1],initial_state_ids=args.inits,
         harness='open-gemini single-Panda automatic-check adaptation',
         baseline_protocol=False,zero_shot=True,demonstrations=False,prior_learnings=None,
@@ -147,7 +170,8 @@ def main():
         experiment_source_sha256={str(p.relative_to(Path(__file__).resolve().parents[1])):
             hashlib.sha256(p.read_bytes()).hexdigest() for p in
             [Path(__file__).resolve(),Path(__file__).resolve().parents[1]/'src/llm_agent_memory/harness/session.py',
-             Path(__file__).resolve().parents[1]/'src/llm_agent_memory/harness/experiments.py']},
+             Path(__file__).resolve().parents[1]/'src/llm_agent_memory/harness/experiments.py',
+             Path(__file__).resolve().parents[1]/'src/llm_agent_memory/harness/haimaker.py']},
         generation_seed=args.generation_seed,seed_schedule='base + decision number' if args.generation_seed is not None else None,
         compact_observations=args.profile=='wrist-v3',max_consecutive_look_only=2,
         server_context_tokens=server.get('default_generation_settings',{}).get('n_ctx'),
@@ -159,7 +183,7 @@ def main():
             gripper_max_steps=20,settle_max_steps=5,
             measured_position_tolerance_m=.004,measured_orientation_tolerance_deg=2))
     (folder/'protocol.json').write_text(json.dumps(protocol,indent=2))
-    run=dict(directory=directory,model='muse-glimmer',effort=args.effort,task_id=0,
+    run=dict(directory=directory,model=model,effort=args.effort,task_id=0,
              initial_state_ids=args.inits,status='running',trial_label=args.trial_label)
     manifest['runs'].append(run)
     results=[]
@@ -174,7 +198,9 @@ def main():
                 compact_observations=args.profile=='wrist-v3',
                 efficient_contact=args.profile=='wrist-v3',clean_images=variant['clean_images'],
                 image_tone=variant.get('image_tone','identity'))
-            transport=Capture(folder/'api',args.effort,max_tokens=args.max_output_tokens); transport.episode=ep
+            transport=(HaimakerCapture(folder/'api',key,budget,max_tokens=args.max_output_tokens) if remote
+                else Capture(folder/'api',args.effort,max_tokens=args.max_output_tokens))
+            transport.episode=ep
             messages=[dict(role='system',content=system)]
             error=None
             monitor=RecoveryMonitor() if variant['recovery'] else None
@@ -195,9 +221,9 @@ def main():
                         for i in users[:-2]:
                             if isinstance(messages[i]['content'],list):
                                 messages[i]['content']=[p for p in messages[i]['content'] if p['type']!='image_url']
-                        body=dict(model='muse-glimmer',messages=messages)
+                        body=dict(model=model,messages=messages)
                         if args.generation_seed is not None: body['seed']=args.generation_seed+call
-                        response=client.post(args.base_url+'/chat/completions',json=body)
+                        response=client.post(base_url+'/chat/completions',json=body)
                         response.raise_for_status(); payload=response.json(); choice=payload['choices'][0]
                         message=choice['message']; text=message.get('content') or ''
                         messages.append(dict(role='assistant',content=text))
@@ -221,6 +247,8 @@ def main():
                                 response=text,feedback=session.feedback))+'\n')
                         if session.done: break
                 status='success' if session.success else 'failure'
+            except ProviderStop as exc:
+                error=str(exc);status='incomplete_budget' if 'budget' in error else 'error'
             except Exception as exc:
                 error=repr(exc); status='error'
             finally:

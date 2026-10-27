@@ -30,12 +30,13 @@ def render_ablations(data):
     parts=['<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="15">',
         '<title>General harness experiments</title><style>body{font:16px system-ui;background:#121722;color:#e1e7ef;margin:32px}a{color:#8ccaff}table{border-collapse:collapse}td,th{padding:12px;border:1px solid #445;text-align:left}p{max-width:1000px}</style>',
         '<h1>General harness experiments</h1><a href="/report.html">All harness trials and videos</a>',
-        '<p>Sequential Task 0/state 0 screen. Original general prompt, high effort, '
+        '<p>Sequential Task 0/state 0 screen. Original general prompt, '
         '16,384 response tokens, 80 decisions, 900 physics steps. One episode per '
         'variant does not establish a success rate. A grasp proposal or completed '
         'primitive is not proof of a retained object or task success. Refreshes every 15 seconds.</p>']
     for campaign in data['campaigns']:
         parts+=['<h2>'+esc(campaign['name'])+'</h2>',
+            '<p>Reasoning effort: <strong>'+esc(campaign['protocol'].get('effort','unknown'))+'</strong></p>',
             '<table><tr><th>Variant</th><th>Status</th><th>Decisions</th><th>Physics steps</th><th>First grasp proposed / completed (decision)</th><th>IK / collision / repeat rejections</th><th>Task success</th></tr>']
         for row in campaign['trials']:
             m=row.get('metrics',{});s=m.get('statuses',{})

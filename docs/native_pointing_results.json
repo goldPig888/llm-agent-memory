@@ -1,0 +1,44 @@
+{
+  "captured_utc": "2026-10-27T22:28:26.571816+00:00",
+  "snapshot_only": true,
+  "protocol": {
+    "model": "muse-glimmer",
+    "effort": "xhigh",
+    "max_output_tokens": 16384,
+    "states": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "cameras": [
+      "agentview"
+    ],
+    "samples": 10,
+    "formats": [
+      "normalized-point",
+      "native-box"
+    ],
+    "coordinate_scale_assumption": 1000,
+    "native_prompt": "Detect the alphabet soup can. Return only the detection in the model's native object-detection format, with no explanation.",
+    "seed": "42 + state; same for paired formats",
+    "order": "point first on even-index samples; native first on odd-index samples",
+    "images": "Unmodified saved RGB; identical bytes for each pair",
+    "physics_steps": 0,
+    "labels": "Scoring only; never included in messages",
+    "interpretation": "Small paired pilot, not a 50-state result. Historical 44% used high, not xhigh.",
+    "sources": [
+      "https://gist.github.com/ariG23498/4f3587eb7753c0ff77c269e2c1efe2c0",
+      "https://huggingface.co/blog/muse-glimmer",
+      "https://huggingface.co/merve/muse-glimmer-ft-clicking-v2"
+    ]
+  },
+  "progress": {
+    "phase": "waiting_for_xhigh_robot_trials",
+    "checked_at": 1793140093.074976,
+    "completed": 0,
+    "total": 10
+  },
+  "summary": null
+}

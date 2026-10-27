@@ -467,3 +467,477 @@ visual-ablation-v1-clean-images,wrist-targeting-v3,0,21,398,416,18,completed,rob
 visual-ablation-v1-clean-images,wrist-targeting-v3,0,22,416,479,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
 robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
 visual-ablation-v1-clean-images,wrist-targeting-v3,0,23,479,497,18,completed,robot.open_gripper()
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,24,497,560,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,25,560,578,18,completed,robot.open_gripper()
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,26,578,641,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,27,641,659,18,completed,robot.open_gripper()
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,28,659,722,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,29,722,740,18,completed,robot.open_gripper()
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,30,740,803,63,dropped,"x, y, z = robot.deproject_depth(u=0.35, v=0.35, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,31,803,821,18,completed,robot.open_gripper()
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,32,821,894,73,grasp_failed,"x, y, z = robot.deproject_depth(u=0.5, v=0.3, camera=""wrist"")
+robot.grasp(x=x, y=y, z=z+0.02, yaw_deg=0)"
+visual-ablation-v1-clean-images,wrist-targeting-v3,0,33,894,894,0,completed,robot.done()
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,1,0,0,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,2,0,38,38,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.30, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,3,38,62,24,COLLISION,"x, y = robot.deproject(u=0.50, v=0.40, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, pitch_deg=90, approach_height=0.05, speed=0.10)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,4,62,86,24,completed,"robot.goto(x=-0.09, y=-0.05, z=0.55, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,5,86,147,61,grasp_failed,"x, y = robot.deproject(u=0.50, v=0.55, z_plane=0.475, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.475, yaw_deg=0, pitch_deg=90, approach_height=0.06, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,6,147,183,36,COLLISION,"x, y = robot.deproject(u=0.50, v=0.50, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, pitch_deg=90, approach_height=0.05, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,7,183,233,50,completed,"x, y, z = robot.deproject_depth(u=0.70, v=0.30, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.15, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,8,233,233,0,COLLISION,"x, y = robot.deproject(u=0.50, v=0.55, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, pitch_deg=90, approach_height=0.06, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,9,233,254,21,completed,"robot.goto(x=-0.0898, y=0.0714, z=0.65, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,10,254,265,11,COLLISION,"x, y = robot.deproject(u=0.50, v=0.55, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, pitch_deg=90, approach_height=0.20, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,11,265,265,0,completed,"robot.look_at(x=0.1, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,12,265,290,25,completed,"x, y, z = robot.deproject_depth(u=0.75, v=0.35, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.15, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,13,290,313,23,COLLISION,"x, y = robot.deproject(u=0.50, v=0.45, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, pitch_deg=90, approach_height=0.10, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,14,313,313,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,15,313,362,49,completed,"x, y, z = robot.deproject_depth(u=0.55, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.15, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,16,362,412,50,COLLISION,"x, y = robot.deproject(u=0.75, v=0.65, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, pitch_deg=90, approach_height=0.20, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,17,412,423,11,COLLISION,"x, y = robot.deproject(u=0.50, v=0.55, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, pitch_deg=90, approach_height=0.20, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,18,423,448,25,completed,"robot.goto(x=0.0, y=0.0, z=0.70, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,19,448,467,19,COLLISION,"x, y = robot.deproject(u=0.50, v=0.65, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=0, pitch_deg=90, approach_height=0.20, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,20,467,520,53,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.15, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,21,520,520,0,COLLISION,"x, y = robot.deproject(u=0.65, v=0.55, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.45, yaw_deg=90, pitch_deg=90, approach_height=0.10, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,22,520,550,30,completed,"robot.goto(x=-0.18, y=-0.12, z=0.70, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,23,550,574,24,COLLISION,"x, y = robot.deproject(u=0.65, v=0.55, z_plane=0.48, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.48, yaw_deg=0, pitch_deg=90, approach_height=0.20, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,24,574,610,36,COLLISION,"x, y = robot.deproject(u=0.50, v=0.35, z_plane=0.48, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.48, yaw_deg=90, pitch_deg=90, approach_height=0.20, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,25,610,726,116,grasp_failed,"x, y = robot.deproject(u=0.50, v=0.35, z_plane=0.48, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.48, yaw_deg=90, pitch_deg=90, approach_height=0.20, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,26,726,779,53,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.45, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.15, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,27,779,812,33,COLLISION,"x, y = robot.deproject(u=0.50, v=0.60, z_plane=0.48, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.48, yaw_deg=0, pitch_deg=90, approach_height=0.10, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,28,812,820,8,COLLISION,"x, y = robot.deproject(u=0.50, v=0.65, z_plane=0.48, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.48, yaw_deg=0, pitch_deg=90, approach_height=0.12, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,29,820,836,16,COLLISION,"x, y = robot.deproject(u=0.50, v=0.55, z_plane=0.48, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.48, yaw_deg=0, pitch_deg=90, approach_height=0.15, speed=0.08)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,30,836,836,0,IK_FAILURE,"robot.goto(x=0.4, y=0.0, z=0.55, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-v1-clean-bright,wrist-targeting-v3,0,31,836,900,64,completed,"x, y = robot.deproject(u=0.50, v=0.55, z_plane=0.55, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.55, yaw_deg=0, pitch_deg=90, approach_height=0.15, speed=0.08)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,1,0,0,0,completed,"robot.look_at(x=-0.18, y=0.05, z=0.5, zoom=2.0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,2,0,35,35,completed,"x, y, z = robot.deproject_depth(u=0.55, v=0.62, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,3,35,35,0,COLLISION,"x, y = robot.deproject(u=0.52, v=0.58, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,4,35,58,23,completed,"robot.goto(x=-0.085, y=0.061, z=0.55, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,5,58,84,26,COLLISION,"x, y = robot.deproject(u=0.50, v=0.60, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.47, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,6,84,107,23,completed,"robot.goto(x=-0.085, y=0.061, z=0.60, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,7,107,187,80,dropped,"x, y = robot.deproject(u=0.50, v=0.60, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.48, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,8,187,197,10,completed,"robot.goto(x=-0.085, y=0.061, z=0.55, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,9,197,215,18,COLLISION,"robot.open_gripper()
+x, y = robot.deproject(u=0.50, v=0.60, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,10,215,231,16,completed,"robot.goto(x=-0.085, y=0.061, z=0.60, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,11,231,288,57,blocked,"x, y = robot.deproject(u=0.50, v=0.55, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.48, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,12,288,303,15,completed,"robot.goto(x=-0.085, y=0.061, z=0.55, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,13,303,362,59,grasp_failed,"x, y = robot.deproject(u=0.50, v=0.50, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.48, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,14,362,362,0,COLLISION,"robot.goto(x=-0.09, y=0.061, z=0.55, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,15,362,362,0,COLLISION,"robot.goto(x=-0.09, y=0.061, z=0.60, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,16,362,380,18,completed,robot.open_gripper()
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,17,380,380,0,COLLISION,"robot.goto(x=-0.09, y=0.06, z=0.60, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,18,380,430,50,completed,"robot.goto(x=-0.09, y=0.06, z=0.70, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,19,430,507,77,blocked,"x, y = robot.deproject(u=0.50, v=0.55, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.48, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,20,507,522,15,completed,"robot.goto(x=-0.09, y=0.06, z=0.55, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,21,522,581,59,grasp_failed,"x, y = robot.deproject(u=0.50, v=0.50, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.48, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,22,581,581,0,COLLISION,"robot.goto(x=-0.09, y=0.06, z=0.55, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,23,581,599,18,completed,robot.open_gripper()
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,24,599,599,0,COLLISION,"robot.goto(x=-0.09, y=0.06, z=0.60, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,25,599,649,50,completed,"robot.goto(x=-0.09, y=0.06, z=0.70, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,26,649,746,97,CARRY_UNVERIFIED,"x, y = robot.deproject(u=0.50, v=0.55, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.48, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,27,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=0.30, y=0.15, z=0.55, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,28,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=0.30, y=0.15, z=0.55, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,29,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=0.30, y=0.15, z=0.55, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,30,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=0.30, y=0.15, z=0.55, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,31,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=-0.061, y=0.033, z=0.65, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,32,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=-0.061, y=0.033, z=0.65, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,33,746,746,0,CARRY_UNVERIFIED,"robot.move_by(forward=0, left=0, dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,34,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=-0.06, y=0.03, z=0.65, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,35,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,36,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,37,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,38,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,39,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,40,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=-0.06, y=0.03, z=0.65, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,41,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=-0.061, y=0.033, z=0.65, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,42,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=0.30, y=0.15, z=0.45, arc_z=0.7, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,43,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,44,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,45,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=-0.061, y=0.033, z=0.65, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,46,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,47,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,48,746,746,0,CARRY_UNVERIFIED,"robot.place(x=0.30, y=0.15, z=0.45, yaw_deg=0, approach_height=0.10)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,49,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=-0.061, y=0.033, z=0.65, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,50,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,51,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,52,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=0.30, y=0.15, z=0.45, arc_z=0.7, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,53,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=0.0, y=0.05, z=0.65, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,54,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=0.0, y=0.05, z=0.65, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,55,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,56,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=0.30, y=0.15, z=0.55, arc_z=0.70, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,57,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=0.30, y=0.15, z=0.55, arc_z=0.70, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,58,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=-0.061, y=0.033, z=0.65, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,59,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,60,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=-0.061, y=0.033, z=0.65, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,61,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,62,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,63,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.15, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,64,746,746,0,CARRY_UNVERIFIED,robot.home()
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,65,746,746,0,CARRY_UNVERIFIED,robot.home()
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,66,746,746,0,CARRY_UNVERIFIED,robot.home()
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,67,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.1, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,68,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.1, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,69,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.1, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,70,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.1, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,71,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.1, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,72,746,746,0,CARRY_UNVERIFIED,"x, y, z = robot.deproject_depth(u=0.85, v=0.65, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.15, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,73,746,746,0,CARRY_UNVERIFIED,"robot.goto(x=-0.06, y=0.03, z=0.65, pitch_deg=90, yaw_deg=0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,74,746,746,0,completed,"robot.look_at(x=0.30, y=0.15, z=0.5, zoom=2.0)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,75,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.05, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,76,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.05, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,77,746,746,0,CARRY_UNVERIFIED,"robot.move_by(dz=0.05, speed=0.05)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,78,746,746,0,CARRY_UNVERIFIED,"robot.place(x=0.30, y=0.15, z=0.45, yaw_deg=0, approach_height=0.10)"
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,79,746,764,18,completed,robot.open_gripper()
+visual-ablation-v1-clean-contrast,wrist-targeting-v3,0,80,764,788,24,completed,"robot.move_by(dz=0.05, speed=0.05)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,1,0,0,0,COLLISION,"x, y, z = robot.deproject_depth(u=0.278, v=0.514, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,2,0,137,137,completed,"x, y = robot.deproject(u=0.273, v=0.514, z_plane=0.50, camera=""agentview"")
+robot.goto(x=x, y=y, z=0.62, arc_z=0.88, pitch_deg=90, yaw_deg=0, speed=0.10)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,3,137,169,32,completed,"x, y = robot.deproject(u=0.410, v=0.655, z_plane=0.47, camera=""wrist"")
+robot.goto(x=x, y=y, z=0.52, pitch_deg=90, yaw_deg=0, speed=0.08)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,4,169,189,20,COLLISION,"x, y, z_lid = robot.deproject_depth(u=0.553, v=0.733, camera=""wrist"")
+robot.grasp(x=x, y=y, z=z_lid-0.030, yaw_deg=0, pitch_deg=90, support_z=0.41, speed=0.08)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,5,189,206,17,completed,"x, y, z = robot.deproject_depth(u=0.520, v=0.850, camera=""wrist"")
+robot.goto(x=x, y=y, z=0.53, pitch_deg=90, yaw_deg=0, speed=0.05)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,6,206,285,79,grasp_failed,"x, y, z_lid = robot.deproject_depth(u=0.500, v=0.875, camera=""wrist"")
+robot.grasp(x=x, y=y, z=z_lid-0.022, yaw_deg=0, pitch_deg=90, support_z=0.41, speed=0.05)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,7,285,285,0,completed,"robot.look_at(x=-0.09, y=-0.18, z=0.41, grid_z=0.41, zoom=2.0)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,8,285,307,22,completed,"x, y, z = robot.deproject_depth(u=0.520, v=0.240, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.10, pitch_deg=90, yaw_deg=0, speed=0.08)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,9,307,319,12,completed,"x, y, z = robot.deproject_depth(u=0.44, v=0.71, camera=""wrist"")
+robot.goto(x=x, y=y, z=z+0.10, pitch_deg=90, yaw_deg=0, speed=0.06)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,10,319,420,101,completed,"x, y, z_lid = robot.deproject_depth(u=0.500, v=0.680, camera=""wrist"")
+robot.grasp(x=x, y=y, z=z_lid-0.018, yaw_deg=0, pitch_deg=90, support_z=0.41, speed=0.06)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,11,420,445,25,completed,"robot.goto(x=-0.094, y=-0.152, z=0.62, pitch_deg=90, yaw_deg=0, speed=0.08)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,12,445,445,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,13,445,573,128,COLLISION,"x, y, z = robot.deproject_depth(u=0.895, v=0.600, camera=""agentview"")
+robot.goto(x=x, y=y, z=0.62, arc_z=0.80, pitch_deg=90, yaw_deg=0, speed=0.10)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,14,573,573,0,"plan_error: line 2: only numbers, variables and + - * / are allowed, got `max(z + 0.22, 0.9)`","x, y, z = robot.deproject_depth(u=0.925, v=0.520, camera=""agentview"")
+robot.goto(x=x, y=y, z=max(z+0.22, 0.90), arc_z=0.95, pitch_deg=90, yaw_deg=0, speed=0.10)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,15,573,573,0,IK_FAILURE,"x, y, z = robot.deproject_depth(u=0.885, v=0.600, camera=""agentview"")
+robot.goto(x=x, y=y, z=0.95, arc_z=1.05, pitch_deg=90, yaw_deg=0, speed=0.10)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,16,573,618,45,completed,"x, y = robot.deproject(u=0.600, v=0.760, z_plane=0.55, camera=""wrist"")
+robot.goto(x=x, y=y, z=0.80, pitch_deg=90, yaw_deg=0, speed=0.05)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,17,618,618,0,COLLISION,"robot.place_until_contact(x=0.022, y=0.301, z=0.50, yaw_deg=0, approach_height=0.04, speed=0.06)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,18,618,669,51,completed,"x, y = robot.deproject(u=0.560, v=0.380, z_plane=0.60, camera=""wrist"")
+robot.goto(x=x, y=y, z=0.75, pitch_deg=90, yaw_deg=0, speed=0.05)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,19,669,728,59,completed,"x, y = robot.deproject(u=0.455, v=0.700, z_plane=0.54, camera=""wrist"")
+robot.goto(x=x, y=y, z=0.62, pitch_deg=90, yaw_deg=0, speed=0.05)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,20,728,745,17,completed,robot.open_gripper()
+deepseek-max-clean-states012,wrist-targeting-v3,0,21,745,875,130,completed,"x, y, z = robot.deproject_depth(u=0.576, v=0.523, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.10, arc_z=0.80, pitch_deg=90, yaw_deg=0, speed=0.10)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,22,875,875,0,speed must be 0.005..0.15 m/s,"x, y, z_lid = robot.deproject_depth(u=0.615, v=0.660, camera=""wrist"")
+robot.grasp(x=x, y=y, z=z_lid-0.020, yaw_deg=0, pitch_deg=90, support_z=0.41, approach_height=0.02, speed=0.20)"
+deepseek-max-clean-states012,wrist-targeting-v3,0,23,875,900,25,completed,"x, y, z_lid = robot.deproject_depth(u=0.615, v=0.660, camera=""wrist"")
+robot.grasp(x=x, y=y, z=z_lid-0.020, yaw_deg=0, pitch_deg=90, support_z=0.41, approach_height=0.02, speed=0.15)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,1,0,36,36,completed,"x, y, z = robot.deproject_depth(u=0.553, v=0.541, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,2,36,79,43,COLLISION,"x, y = robot.deproject(u=0.605, v=0.668, z_plane=0.51, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0, support_z=0.41)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,3,79,79,0,completed,"robot.look_at(x=-0.10, y=0.04, z=0.47, zoom=2.0)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,4,79,133,54,COLLISION,"robot.grasp(x=-0.1065, y=0.0412, z=0.46, yaw_deg=90, approach_height=0.08, support_z=0.41)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,5,133,168,35,completed,"x, y, ztop = robot.deproject_depth(u=0.53, v=0.78, camera=""wrist"")
+robot.goto(x=x, y=y, z=ztop+0.12, pitch_deg=90, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,6,168,287,119,completed,"x, y = robot.deproject(u=0.545, v=0.660, z_plane=0.508, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.495, yaw_deg=90, approach_height=0.12, support_z=0.41)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,7,287,323,36,completed,"x, y, z = robot.deproject_depth(u=0.93, v=0.50, camera=""agentview"")
+robot.goto(x=x, y=y, z=0.75, pitch_deg=90, yaw_deg=90, speed=0.15)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,8,323,323,0,COLLISION,"x, y, z = robot.deproject_depth(u=0.35, v=0.33, camera=""wrist"")
+robot.goto(x=x, y=y, z=z+0.15, pitch_deg=90, yaw_deg=90, speed=0.12)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,9,323,363,40,completed,"xb, yb, zb = robot.deproject_depth(u=0.35, v=0.33, camera=""wrist"")
+robot.goto(x=xb, y=yb, z=0.85, pitch_deg=90, yaw_deg=90, speed=0.12)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,10,363,375,12,COLLISION,"xb, yb = robot.deproject(u=0.52, v=0.52, z_plane=0.44, camera=""wrist"")
+robot.goto(x=xb, y=yb, z=0.85, pitch_deg=90, yaw_deg=90, speed=0.10)
+robot.goto(x=xb, y=yb, z=0.54, pitch_deg=90, yaw_deg=90, speed=0.06)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,11,375,452,77,completed,"xb, yb = robot.deproject(u=0.551, v=0.576, z_plane=0.50, camera=""wrist"")
+robot.goto(x=xb, y=yb, z=0.85, pitch_deg=90, yaw_deg=90, speed=0.10)
+robot.goto(x=xb, y=yb, z=0.70, pitch_deg=90, yaw_deg=90, speed=0.05)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,12,452,475,23,COLLISION,"xb, yb = robot.deproject(u=0.450, v=0.530, z_plane=0.45, camera=""wrist"")
+robot.goto(x=xb, y=yb, z=0.72, pitch_deg=90, yaw_deg=90, speed=0.05)
+robot.goto(x=xb, y=yb, z=0.58, pitch_deg=90, yaw_deg=90, speed=0.04)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,13,475,537,62,completed,"robot.goto(x=0.0487, y=0.2718, z=1.00, pitch_deg=90, yaw_deg=90, speed=0.10)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,14,537,537,0,completed,"robot.look_at(x=0.0, y=0.22, z=0.45, zoom=1.5)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,15,537,566,29,completed,"xb, yb, zb = robot.deproject_depth(u=0.855, v=0.400, camera=""agentview"")
+robot.goto(x=xb, y=yb, z=0.90, pitch_deg=90, yaw_deg=90, speed=0.10)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,16,566,654,88,completed,"xb, yb = robot.deproject(u=0.400, v=0.575, z_plane=0.41, camera=""wrist"")
+robot.goto(x=xb, y=yb, z=0.90, pitch_deg=90, yaw_deg=90, speed=0.10)
+robot.goto(x=xb, y=yb, z=0.72, pitch_deg=90, yaw_deg=90, speed=0.06)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,17,654,697,43,completed,"xb, yb = robot.deproject(u=0.810, v=0.440, z_plane=0.47, camera=""agentview"")
+robot.goto(x=xb, y=yb, z=0.62, pitch_deg=90, yaw_deg=90, speed=0.08)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,18,697,746,49,COLLISION,"xb, yb = robot.deproject(u=0.470, v=0.480, z_plane=0.45, camera=""wrist"")
+robot.goto(x=xb, y=yb, z=0.58, pitch_deg=90, yaw_deg=90, speed=0.05)
+robot.place_until_contact(x=xb, y=yb, z=0.47, yaw_deg=90, speed=0.05)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,19,746,810,64,completed,"robot.open_gripper()
+robot.goto(x=0.0365, y=0.2578, z=0.80, pitch_deg=90, yaw_deg=90, speed=0.12)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,20,810,810,0,speed must be 0.005..0.15 m/s,"x, y, zt = robot.deproject_depth(u=0.307, v=0.625, camera=""agentview"")
+robot.grasp(x=x, y=y, z=zt-0.013, yaw_deg=0, approach_height=0.06, speed=0.30, support_z=0.41)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,21,810,881,71,COLLISION,"x, y, zt = robot.deproject_depth(u=0.307, v=0.625, camera=""agentview"")
+robot.grasp(x=x, y=y, z=zt-0.013, yaw_deg=0, approach_height=0.06, speed=0.15, support_z=0.41)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,22,881,881,0,COLLISION,"x, y, zt = robot.deproject_depth(u=0.950, v=0.550, camera=""wrist"")
+robot.grasp(x=x, y=y, z=zt-0.010, yaw_deg=0, approach_height=0.03, speed=0.15, support_z=0.41)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,23,881,881,0,New observation requested; no motion.,obs
+deepseek-max-clean-states012,wrist-targeting-v3,1,24,881,881,0,completed,"robot.look_at(x=0.04, y=0.26, z=0.45, zoom=2.0)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,25,881,881,0,observation_limit: propose a pixel target and hover/motion next; additional observation-only turns do not improve geometry.,obs
+deepseek-max-clean-states012,wrist-targeting-v3,1,26,881,894,13,completed,"robot.move_by(dz=0.06, speed=0.15)"
+deepseek-max-clean-states012,wrist-targeting-v3,1,27,894,894,0,New observation requested; no motion.,obs
+deepseek-max-clean-states012,wrist-targeting-v3,1,28,894,894,0,New observation requested; no motion.,obs
+deepseek-max-clean-states012,wrist-targeting-v3,1,29,894,894,0,observation_limit: propose a pixel target and hover/motion next; additional observation-only turns do not improve geometry.,obs
+deepseek-max-clean-states012,wrist-targeting-v3,1,30,894,894,0,observation_limit: propose a pixel target and hover/motion next; additional observation-only turns do not improve geometry.,obs
+deepseek-max-clean-states012,wrist-targeting-v3,1,31,894,900,6,completed,"robot.move_by(forward=-0.03, speed=0.15)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,1,0,36,36,completed,"x, y, z = robot.deproject_depth(u=0.30, v=0.555, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,2,36,54,18,completed,"x, y, z = robot.deproject_depth(u=0.596, v=0.611, camera=""wrist"")
+robot.goto(x=x, y=y, z=z+0.07, pitch_deg=90)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,3,54,54,0,completed,"robot.look_at(x=-0.09, y=-0.145, z=0.43, zoom=2.5)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,4,54,71,17,COLLISION,"x, y = robot.deproject(u=0.49, v=0.735, z_plane=0.508, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.47, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,5,71,98,27,completed,"robot.move_by(dz=0.06)
+robot.look_at(x=-0.09, y=-0.145, z=0.43, zoom=2.0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,6,98,107,9,completed,"x, y, z = robot.deproject_depth(u=0.49, v=0.68, camera=""wrist"")
+robot.goto(x=x, y=y, z=z+0.09, pitch_deg=90, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,7,107,123,16,COLLISION,"x, y, z = robot.deproject_depth(u=0.49, v=0.68, camera=""wrist"")
+robot.grasp(x=x, y=y, z=z-0.02, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,8,123,162,39,completed,"robot.move_by(dz=0.09)
+robot.look_at(x=-0.05, y=-0.05, z=0.43, zoom=1.0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,9,162,162,0,completed,"x, y = robot.deproject(u=0.50, v=0.62, z_plane=0.41, camera=""agentview"")
+robot.look_at(x=x, y=y, z=0.44, zoom=2.0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,10,162,200,38,completed,"x, y, z = robot.deproject_depth(u=0.572, v=0.453, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,11,200,232,32,completed,"x, y, z = robot.deproject_depth(u=0.605, v=0.475, camera=""wrist"")
+robot.goto(x=x, y=y, z=z+0.10, pitch_deg=90, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,12,232,263,31,completed,"x, y, z = robot.deproject_depth(u=0.434, v=0.225, camera=""wrist"")
+robot.goto(x=x, y=y, z=z+0.10, pitch_deg=90, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,13,263,263,0,COLLISION,"x, y, z = robot.deproject_depth(u=0.533, v=0.514, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z-0.03, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,14,263,301,38,completed,"x, y, z = robot.deproject_depth(u=0.575, v=0.36, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.12, pitch_deg=90, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,15,301,301,0,COLLISION,"x, y, z = robot.deproject_depth(u=0.215, v=0.195, camera=""wrist"")
+robot.goto(x=x, y=y, z=z+0.10, pitch_deg=90, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,16,301,374,73,completed,"x, y, z = robot.deproject_depth(u=0.44, v=0.68, camera=""wrist"")
+robot.grasp(x=x, y=y, z=z-0.02, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,17,374,417,43,completed,"robot.move_by(dz=0.10)
+robot.look_at(x=-0.05, y=-0.05, z=0.43, zoom=1.0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,18,417,496,79,completed,"x, y, z = robot.deproject_depth(u=0.86, v=0.63, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.18, pitch_deg=90, yaw_deg=0, arc_z=0.72)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,19,496,537,41,completed,"x, y, z = robot.deproject_depth(u=0.64, v=0.64, camera=""wrist"")
+robot.goto(x=x, y=y, z=z+0.15, pitch_deg=90)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,20,537,537,0,COLLISION,"x, y, z = robot.deproject_depth(u=0.879, v=0.537, camera=""agentview"")
+robot.goto(x=x, y=y, z=0.62, pitch_deg=90)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,21,537,551,14,completed,"x, y = robot.deproject(u=0.879, v=0.60, z_plane=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=0.90, pitch_deg=90)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,22,551,598,47,completed,"x, y, z = robot.deproject_depth(u=0.855, v=0.535, camera=""agentview"")
+robot.goto(x=x, y=y, z=0.72, pitch_deg=90)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,23,598,598,0,COLLISION,"robot.goto(x=0.00, y=0.19, z=0.62, pitch_deg=90)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,24,598,632,34,completed,"robot.goto(x=0.00, y=0.15, z=0.82, pitch_deg=90)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,25,632,662,30,completed,"x, y, z = robot.deproject_depth(u=0.38, v=0.62, camera=""wrist"")
+robot.goto(x=x, y=y, z=0.70, pitch_deg=90)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,26,662,710,48,completed,"x, y = robot.deproject(u=0.889, v=0.576, z_plane=0.45, camera=""agentview"")
+robot.goto(x=x, y=y, z=0.75, pitch_deg=90)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,27,710,826,116,completed,"x, y = robot.deproject(u=0.26, v=0.47, z_plane=0.45, camera=""wrist"")
+robot.place(x=x, y=y, z=0.75, yaw_deg=0)"
+deepseek-max-clean-states012,wrist-targeting-v3,2,28,826,900,74,COLLISION,"x, y, z = robot.deproject_depth(u=0.537, v=0.752, camera=""agentview"")
+robot.grasp(x=x, y=y, z=z-0.03, yaw_deg=0, support_z=0.41)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,1,0,50,50,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,2,50,50,0,completed,"robot.look_at(x=-0.22, y=-0.04, z=0.41, zoom=2.0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,3,50,60,10,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,4,60,69,9,completed,"x, y = robot.deproject(u=0.5, v=0.6, z_plane=0.45, camera=""wrist"")
+robot.goto(x=x, y=y, z=0.55, pitch_deg=90)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,5,69,149,80,grasp_failed,"robot.grasp(x=-0.145, y=-0.10, z=0.455, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,6,149,167,18,COLLISION,"x, y = robot.deproject(u=0.55, v=0.45, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,7,167,181,14,COLLISION,"robot.goto(x=-0.145, y=-0.10, z=0.5, pitch_deg=90)
+x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,8,181,198,17,completed,"robot.goto(x=-0.145, y=-0.10, z=0.55, pitch_deg=90)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,9,198,198,0,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.455, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,10,198,198,0,COLLISION,"x, y = robot.deproject(u=0.45, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,11,198,214,16,COLLISION,"robot.goto(x=-0.145, y=-0.10, z=0.60, pitch_deg=90)
+x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,12,214,229,15,COLLISION,"robot.goto(x=-0.165, y=-0.10, z=0.55, pitch_deg=90)
+x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,13,229,237,8,COLLISION,"robot.goto(x=-0.18, y=-0.10, z=0.55, pitch_deg=90)
+x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,14,237,252,15,COLLISION,"robot.goto(x=-0.18, y=-0.10, z=0.60, pitch_deg=90)
+x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,15,252,252,0,completed,"robot.look_at(x=-0.15, y=-0.05, z=0.41, zoom=2.0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,16,252,275,23,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,17,275,291,16,COLLISION,"robot.place(x=-0.099, y=-0.104, z=0.42, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,18,291,291,0,COLLISION,"x, y = robot.deproject(u=0.35, v=0.45, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,19,291,320,29,COLLISION,"robot.goto(x=-0.20, y=-0.05, z=0.55, pitch_deg=90)
+x, y = robot.deproject(u=0.35, v=0.55, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,20,320,393,73,grasp_failed,"robot.goto(x=-0.22, y=-0.05, z=0.55, pitch_deg=90)
+x, y = robot.deproject(u=0.45, v=0.55, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,21,393,436,43,COLLISION,"robot.goto(x=-0.22, y=-0.07, z=0.55, pitch_deg=90)
+x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,22,436,464,28,COLLISION,"robot.goto(x=-0.22, y=-0.07, z=0.65, pitch_deg=90)
+x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,23,464,464,0,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,24,464,488,24,COLLISION,"robot.goto(x=-0.22, y=-0.07, z=0.55, pitch_deg=90)
+x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,25,488,488,0,IK_FAILURE,"robot.goto(x=-0.24, y=-0.07, z=0.60, pitch_deg=90)
+x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,26,488,494,6,COLLISION,"robot.goto(x=-0.22, y=-0.08, z=0.55, pitch_deg=90)
+x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,27,494,502,8,COLLISION,"robot.goto(x=-0.23, y=-0.09, z=0.55, pitch_deg=90)
+x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,28,502,505,3,COLLISION,"robot.goto(x=-0.23, y=-0.09, z=0.55, pitch_deg=90)
+x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,29,505,544,39,completed,"x, y, z = robot.deproject_depth(u=0.70, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,30,544,606,62,grasp_failed,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.45, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.46, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,31,606,683,77,grasp_failed,"robot.grasp(x=-0.099, y=-0.028, z=0.455, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,32,683,758,75,grasp_failed,"robot.grasp(x=-0.099, y=-0.028, z=0.445, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,33,758,801,43,COLLISION,"robot.grasp(x=-0.099, y=-0.028, z=0.435, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,34,801,822,21,COLLISION,"robot.grasp(x=-0.099, y=-0.028, z=0.425, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,35,822,885,63,grasp_failed,"robot.grasp(x=-0.099, y=-0.028, z=0.47, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-images,wrist-targeting-v3,0,36,885,900,15,COLLISION,"robot.grasp(x=-0.099, y=-0.028, z=0.44, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,1,0,0,0,completed,"robot.look_at(x=0.0, y=-0.08, z=0.41, zoom=2.0)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,2,0,0,0,completed,"robot.look_at(x=0.45, y=-0.15, z=0.41, zoom=2.0)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,3,0,0,0,observation_limit,"robot.look_at(x=-0.35, y=0.25, z=0.41, zoom=2.0)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,4,0,35,35,completed,"x_alph, y_alph, z_alph = robot.deproject_depth(u=0.35, v=0.75, camera=""wrist"")
+x_toma, y_toma, z_toma = robot.deproject_depth(u=0.70, v=0.75, camera=""wrist"")
+robot.goto(x=x_alph, y=y_alph, z=z_alph+0.13, pitch_deg=90, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,5,35,76,41,COLLISION,"x_can, y_can = robot.deproject(u=0.5, v=0.55, z_plane=0.47, camera=""wrist"")
+robot.grasp(x=x_can, y=y_can, z=0.47, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,6,76,145,69,grasp_failed,"x_can, y_can, z_can = robot.deproject_depth(u=0.5, v=0.55, camera=""wrist"")
+robot.grasp(x=x_can, y=y_can, z=z_can+0.04, yaw_deg=0, pitch_deg=90, approach_height=0.08)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,7,145,157,12,completed,"robot.move_by(forward=0, left=-0.02, dz=0, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,8,157,157,0,COLLISION,"robot.move_until_contact(dz=-0.04, speed=0.03, max_lag=0.012, relief=0.002)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,9,157,175,18,completed,robot.open_gripper()
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,10,175,198,23,completed,"robot.move_by(forward=0, left=0, dz=0.05, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,11,198,255,57,grasp_failed,"x_can, y_can = robot.deproject(u=0.5, v=0.55, z_plane=0.47, camera=""wrist"")
+robot.grasp(x=x_can, y=y_can, z=0.47, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,12,255,263,8,completed,"robot.move_by(forward=0, left=0.01, dz=0, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,13,263,272,9,completed,"robot.move_by(forward=0, left=0.015, dz=0, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,14,272,290,18,completed,robot.open_gripper()
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,15,290,348,58,grasp_failed,"robot.grasp(x=-0.116, y=-0.04, z=0.46, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,16,348,348,0,COLLISION,"robot.move_by(forward=0, left=0, dz=-0.02, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,17,348,366,18,completed,robot.open_gripper()
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,18,366,382,16,completed,"robot.move_by(forward=0, left=0, dz=0.03, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,19,382,444,62,grasp_failed,"x_can, y_can = robot.deproject(u=0.5, v=0.5, z_plane=0.47, camera=""wrist"")
+robot.grasp(x=x_can, y=y_can, z=0.47, yaw_deg=0, pitch_deg=90, approach_height=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,20,444,457,13,completed,"robot.move_by(forward=0.02, left=0, dz=0, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,21,457,475,18,completed,robot.open_gripper()
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,22,475,488,13,completed,"robot.move_by(forward=0, left=0, dz=-0.02, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,23,488,506,18,completed,robot.close_gripper()
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,24,506,506,0,completed,"robot.look_at(x=-0.3, y=0.1, z=0.41, zoom=2.0)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,25,506,558,52,completed,"x_can, y_can, z_can = robot.deproject_depth(u=0.45, v=0.55, camera=""agentview"")
+robot.goto(x=x_can, y=y_can, z=z_can+0.12, pitch_deg=90, yaw_deg=0)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,26,558,558,0,COLLISION,"robot.move_by(forward=0, left=0, dz=-0.15, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,27,558,576,18,completed,robot.open_gripper()
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,28,576,600,24,completed,"robot.move_by(forward=0, left=0, dz=0.05, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,29,600,652,52,COLLISION,"x_can, y_can = robot.deproject(u=0.5, v=0.5, z_plane=0.47, camera=""wrist"")
+robot.grasp(x=x_can, y=y_can, z=0.47, yaw_deg=0, pitch_deg=90, approach_height=0.08)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,30,652,723,71,grasp_failed,"x_can, y_can = robot.deproject(u=0.5, v=0.5, z_plane=0.47, camera=""wrist"")
+robot.grasp(x=x_can, y=y_can, z=0.47, yaw_deg=0, pitch_deg=90, approach_height=0.08)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,31,723,723,0,COLLISION,"robot.move_by(forward=0, left=0, dz=-0.03, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,32,723,741,18,completed,robot.open_gripper()
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,33,741,760,19,completed,"robot.move_by(forward=0, left=0, dz=0.04, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,34,760,783,23,completed,"robot.move_by(forward=0, left=0, dz=-0.05, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,35,783,801,18,completed,robot.close_gripper()
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,36,801,817,16,completed,"robot.move_by(forward=0, left=0, dz=0.03, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,37,817,836,19,completed,"robot.move_by(forward=0, left=0, dz=-0.04, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,38,836,854,18,completed,robot.open_gripper()
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,39,854,872,18,completed,robot.close_gripper()
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,40,872,889,17,completed,"robot.move_by(forward=0, left=0, dz=0.03, dyaw_deg=0, speed=0.05)"
+visual-ablation-xhigh-v1-clean-bright,wrist-targeting-v3,0,41,889,889,0,completed,robot.done()
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,1,0,0,0,completed,"robot.look_at(x=-0.05, y=0.0, z=0.41, grid_z=0.41, zoom=2.0)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,2,0,37,37,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,3,37,96,59,grasp_failed,"x, y = robot.deproject(u=0.65, v=0.65, z_plane=0.485, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.485, yaw_deg=0, pitch_deg=90, approach_height=0.05, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,4,96,96,0,completed,"robot.look_at(x=-0.03, y=-0.05, z=0.41, grid_z=0.41, zoom=2.0)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,5,96,96,0,COLLISION,"x, y, z = robot.deproject_depth(u=0.35, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.13, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,6,96,132,36,completed,"robot.open_gripper()
+robot.goto(x=-0.05, y=-0.05, z=0.55, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,7,132,132,0,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.475, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.475, yaw_deg=0, pitch_deg=90, approach_height=0.05, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,8,132,148,16,completed,"robot.goto(x=-0.05, y=-0.05, z=0.6, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,9,148,166,18,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.475, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.475, yaw_deg=0, pitch_deg=90, approach_height=0.08, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,10,166,181,15,completed,"robot.goto(x=-0.05, y=-0.08, z=0.6, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,11,181,194,13,COLLISION,"x, y = robot.deproject(u=0.55, v=0.55, z_plane=0.475, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.475, yaw_deg=0, pitch_deg=90, approach_height=0.12, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,12,194,194,0,completed,"robot.look_at(x=-0.05, y=-0.07, z=0.41, grid_z=0.41, zoom=2.0)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,13,194,230,36,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.5, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.15, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,14,230,260,30,completed,"robot.goto(x=-0.05, y=-0.07, z=0.65, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,15,260,279,19,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.475, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.475, yaw_deg=0, pitch_deg=90, approach_height=0.12, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,16,279,313,34,completed,"x, y, z = robot.deproject_depth(u=0.35, v=0.55, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.18, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,17,313,344,31,completed,"robot.goto(x=-0.05, y=-0.07, z=0.65, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,18,344,364,20,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.475, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.475, yaw_deg=0, pitch_deg=90, approach_height=0.12, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,19,364,407,43,completed,"x, y, z = robot.deproject_depth(u=0.32, v=0.45, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.20, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,20,407,443,36,completed,"robot.goto(x=-0.05, y=-0.07, z=0.65, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,21,443,463,20,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.475, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.475, yaw_deg=0, pitch_deg=90, approach_height=0.12, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,22,463,509,46,completed,"x, y, z = robot.deproject_depth(u=0.30, v=0.45, camera=""agentview"")
+robot.goto(x=x, y=y, z=z+0.22, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,23,509,547,38,completed,"robot.goto(x=-0.05, y=-0.07, z=0.65, pitch_deg=90, yaw_deg=0, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,24,547,567,20,COLLISION,"x, y = robot.deproject(u=0.5, v=0.5, z_plane=0.475, camera=""wrist"")
+robot.grasp(x=x, y=y, z=0.475, yaw_deg=0, pitch_deg=90, approach_height=0.12, speed=0.10)"
+visual-ablation-xhigh-v1-clean-contrast,wrist-targeting-v3,0,25,567,567,0,completed,"robot.look_at(x=0.0, y=0.0, z=0.41, grid_z=0.41, zoom=1.0)"
